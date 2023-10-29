@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- <Import Project="$(SolutionDir)\ProjectProperties\Cells.props.filters" /> -->
+  <ItemGroup>
+    <Filter Include="Cells">
+      <UniqueIdentifier>{A2D780A0-8F01-4F8D-B26B-AE53E0928537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cells\Classes">
+      <UniqueIdentifier>{30FA8901-BAEC-4815-9B59-4DF1297409E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cells\Structs">
+      <UniqueIdentifier>{73D8C8A0-95D6-490B-95AD-6416D371488D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\Cells\Classes\SurfaceCell.cpp">
+      <Filter>Cells\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Cells\Structs\CellLevels.cpp">
+      <Filter>Cells\Structs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Sources\Cells\Classes\SurfaceCell.h">
+      <Filter>Cells\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Cells\Structs\CellLevels.h">
+      <Filter>Cells\Structs</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

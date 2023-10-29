@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+
+  <PropertyGroup>
+    <IncludePath>$(SolutionDir)\Sources\Objects;$(SolutionDir)\Sources\Objects\Classes;$(SolutionDir)\Sources\Objects\Interfaces;$(SolutionDir)\Sources\Objects\Structs;$(SolutionDir)\Sources\Objects\ValuesTypes;</IncludePath>
+  </PropertyGroup>
+
+  <!-- Macros $(SolutionDir) not guaranteed to work in all scenarios -->
+  <ItemGroup>
+    <ClInclude Include="..\Sources\Objects\ObjectsStreams.h" />
+    <ClCompile Include="..\Sources\Objects\ObjectsStreams.cpp" />
+  </ItemGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <ClInclude Include="..\Sources\Objects\Classes\Object.h" />
+    <ClInclude Include="..\Sources\Objects\Classes\Dna.h" />
+    <ClInclude Include="..\Sources\Objects\Classes\LiveObject.h" />
+    <ClInclude Include="..\Sources\Objects\Classes\ObjectManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\Objects\Classes\Object.cpp" />
+    <ClCompile Include="..\Sources\Objects\Classes\Dna.cpp" />
+    <ClCompile Include="..\Sources\Objects\Classes\LiveObject.cpp" />
+    <ClCompile Include="..\Sources\Objects\Classes\ObjectManager.cpp" />
+  </ItemGroup>
+  <!-- Interfaces -->
+  <ItemGroup>
+    <ClInclude Include="..\Sources\Objects\Interfaces\IContainerManager.h" />
+    <ClInclude Include="..\Sources\Objects\Interfaces\IDamageIO.h" />
+    <ClInclude Include="..\Sources\Objects\Interfaces\IExistancePoints.h" />
+    <ClInclude Include="..\Sources\Objects\Interfaces\IimpactedObject.h" />
+    <ClInclude Include="..\Sources\Objects\Interfaces\ILivePoints.h" />
+  </ItemGroup>
+  <!-- Structs -->
+  <ItemGroup>
+    <ClInclude Include="..\Sources\Objects\Structs\BonusInfluence.h" />
+    <ClInclude Include="..\Sources\Objects\Structs\Damage.h" />
+    <ClCompile Include="..\Sources\Objects\Structs\Damage.cpp" />
+    <ClInclude Include="..\Sources\Objects\Structs\LiveObjectCharacters.h" />
+    <ClInclude Include="..\Sources\Objects\Structs\ObjectData.h" />
+  </ItemGroup>
+  <!-- ValuesTypes -->
+  <ItemGroup>
+    <ClInclude Include="..\Sources\Objects\ValuesTypes\CharacterValue.h" />
+    <ClInclude Include="..\Sources\Objects\ValuesTypes\EnergyValue.h" />
+    <ClInclude Include="..\Sources\Objects\ValuesTypes\RangedValue.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\Objects\ValuesTypes\CharacterValue.cpp" />
+    <ClCompile Include="..\Sources\Objects\ValuesTypes\EnergyValue.cpp" />
+    <ClCompile Include="..\Sources\Objects\ValuesTypes\RangedValue.cpp" />
+  </ItemGroup>
+</Project>
