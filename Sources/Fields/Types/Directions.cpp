@@ -5,43 +5,43 @@ Directions::Directions(int nDirs)
 {
 }
 
-Directions::Directions(int direction, int nDirs)
+/* Directions::Directions(int direction, int nDirs)
     : NDirections(nDirs)
     , Azimuth(direction)
 {
-}
-
-void Directions::Normalize(int &direction) const
-{
-    if (isDirectValide(direction)) return;
-
-    int fullRound = int(NDirections);
-    if (direction < 0) {
-        while (direction < 0)
-        {
-            direction += fullRound;
-        }
-    }
-    else {
-        while (direction >= fullRound)
-        {
-            direction -= fullRound;
-        }
-    }
-}
+} */
 
 int Directions::getDirections() const
 {
     return int(NDirections);
 }
 
-int Directions::getDirection() const
+bool Directions::isDirectValide(int intDirection) const
 {
-    return int(Azimuth);
+    return intDirection >= 0 && intDirection < int(NDirections);
 }
 
-bool Directions::isDirectValide(int direction) const
+void Directions::normalize(int &rawDirection) const
 {
-    return direction >= 0 && direction < int(NDirections);
+    if (isDirectValide(rawDirection)) return;
+
+    int fullRound = int(NDirections);
+    if (rawDirection < 0) {
+        while (rawDirection < 0)
+        {
+            rawDirection += fullRound;
+        }
+    }
+    else {
+        while (rawDirection >= fullRound)
+        {
+            rawDirection -= fullRound;
+        }
+    }
 }
 
+Direction Directions::getDirection(int rawDirection) const
+{
+    normalize(rawDirection);
+    return Direction(rawDirection);
+}

@@ -13,15 +13,19 @@ DirectionsStatuses::~DirectionsStatuses()
 
 bool DirectionsStatuses::getStatus(int direction) const
 {
-    int trueDirection = direction;
-    Normalize(trueDirection);
-    return DirectionsStats[trueDirection];
+    normalize(direction);
+    return DirectionsStats[direction];
 }
 
 void DirectionsStatuses::setStatus(int direction, bool status)
 {
-    int trueDirection = direction;
-    Normalize(trueDirection);
-    DirectionsStats[trueDirection] = status;
+    normalize(direction);
+    DirectionsStats[direction] = status;
+}
+
+Direction DirectionsStatuses::getDirection(int rawDirection) const
+{
+    normalize(rawDirection);
+    return Direction(rawDirection, DirectionsStats[rawDirection]);
 }
 

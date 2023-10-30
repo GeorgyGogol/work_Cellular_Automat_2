@@ -16,5 +16,7 @@ public:
     bool getStatus(int direction) const;
     void setStatus(int direction, bool status);
 
+    Direction getDirection(int rawDirection) const override;
+
 };
 
