@@ -41,3 +41,4 @@ bool BaseField::isCoordValide(int x, int y) const
 
     return res;
 }
+

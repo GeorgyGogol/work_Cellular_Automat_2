@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+
+  <PropertyGroup>
+    <IncludePath>$(SolutionDir)\Sources\Fields;$(SolutionDir)\Sources\Fields\Abstractions;$(SolutionDir)\Sources\Fields\Classes;$(SolutionDir)\Sources\Fields\Interfaces;$(SolutionDir)\Sources\Fields\Types;</IncludePath>
+  </PropertyGroup>
+
+  <!-- Macros $(SolutionDir) not guaranteed to work in all scenarios -->
+  <!-- Abstractions -->
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)Sources\Fields\Abstractions\AbstractField.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)Sources\Fields\Abstractions\AbstractField.cpp" />
+  </ItemGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)Sources\Fields\Classes\FieldSquare.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)Sources\Fields\Classes\FieldSquare.cpp" />
+  </ItemGroup>
+  <!-- Interfaces -->
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)Sources\Fields\Interfaces\ICellAccess.h" />
+  </ItemGroup>
+  <!-- Types -->
+  <ItemGroup>
+    <ClInclude Include="$(SolutionDir)Sources\Fields\Types\Point.h" />
+    <ClInclude Include="$(SolutionDir)Sources\Fields\Types\Direction.h" />
+    <ClInclude Include="$(SolutionDir)Sources\Fields\Types\Directions.h" />
+    <ClInclude Include="$(SolutionDir)Sources\Fields\Types\DirectionsStatuses.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)Sources\Fields\Types\Point.cpp" />
+    <ClCompile Include="$(SolutionDir)Sources\Fields\Types\Direction.cpp" />
+    <ClCompile Include="$(SolutionDir)Sources\Fields\Types\Directions.cpp" />
+    <ClCompile Include="$(SolutionDir)Sources\Fields\Types\DirectionsStatuses.cpp" />
+  </ItemGroup>
+</Project>

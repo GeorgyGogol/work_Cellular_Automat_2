@@ -14,13 +14,15 @@ public:
     BaseField(BaseField&& from) noexcept;
 
 private:
-    int Height;
     Directions AvalableDirections;
 
     virtual void CreateField() = 0;
     virtual void DeleteField() = 0;
     virtual void CopyField(const BaseField& src) = 0;
     virtual void MoveField(BaseField&& src) noexcept = 0;
+
+protected:
+    int Height;
 
 public:
     int getHeight() const;
