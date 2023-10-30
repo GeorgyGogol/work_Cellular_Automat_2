@@ -48,7 +48,7 @@ void LiveObject::setAge(int age)
 
 ObjectData LiveObject::getObjectData() const
 {
-    return ObjectData(Existance);
+    return ObjectData{ Existance };
 }
 
 void LiveObject::RecieveDamage(const Damage &dmg)
@@ -93,6 +93,7 @@ void LiveObject::increaseAge(int delta)
     
     Age += delta;
 
+    /*
     if (!isDead){
         for (auto each : SubObjects) {
             each.setAge(Age);
@@ -105,4 +106,5 @@ void LiveObject::increaseAge(int delta)
             each.Live.setEmpty();
         }
     }
+    */
 }

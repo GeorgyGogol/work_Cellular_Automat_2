@@ -13,7 +13,7 @@
 class LiveObject
     : public Object
     , public ILivePoints
-    , public IMoveAction
+    //, public IMoveAction
 {
 public:
     LiveObject(const DNA& dna);

@@ -9,7 +9,7 @@ int SurfaceLevel(const CellLevels &info)
 
         return max;
     }
-    else{
+    else {
         return info.Altitude + info.LiquidCount;
     }
 }

@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
 
   <PropertyGroup>
-    <IncludePath>$(SolutionDir)\Sources\Cells;$(SolutionDir)\Sources\Cells\Structs;$(SolutionDir)\Sources\Cells\Classes</IncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)\Sources\Cells;$(SolutionDir)\Sources\Cells\Structs;$(SolutionDir)\Sources\Cells\Classes;</IncludePath>
   </PropertyGroup>
 
   <!-- Macros $(SolutionDir) not guaranteed to work in all scenarios -->

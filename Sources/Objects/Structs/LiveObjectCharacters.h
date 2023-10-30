@@ -10,7 +10,16 @@ struct LiveObjectCharacters_s
 
 struct LiveObjectCharacters
 {
-    LiveObjectCharacters(const LiveObjectCharacters_s& src);
+    LiveObjectCharacters() {
+        Strength = 0;
+        Endurance = 0;
+    }
+
+    LiveObjectCharacters(const LiveObjectCharacters_s& src)
+    {
+        Strength = src.Strength;
+        Endurance = src.Endurance;
+    }
     
     CharacterValue Strength;
     CharacterValue Endurance;

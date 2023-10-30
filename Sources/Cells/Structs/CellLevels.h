@@ -2,9 +2,9 @@
 
 struct CellLevels
 {
-    int Altitude;
-    int LiquidCount;
-    bool isLiquidUnderground;
+    int Altitude = 0;
+    int LiquidCount = 0;
+    bool isLiquidUnderground = true;
 
 };
 

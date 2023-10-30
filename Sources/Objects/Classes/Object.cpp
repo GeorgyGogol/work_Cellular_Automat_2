@@ -35,7 +35,7 @@ bool Object::isExists() const
 void Object::RecieveDamage(const Damage& dmg)
 {
     removeExistancePoints(dmg.Points);
-    dmg.Emmiter->RecieveDamage(dmg);
+    //dmg.Emmiter->RecieveDamage(dmg);
 }
 
 void Object::SendDamage(IDamageIO* reciver, int damageStrengh)

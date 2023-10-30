@@ -13,7 +13,7 @@ double DNA::getAccidentDeathModifier() const
 
 void DNA::changeAccidentDeathModifier(double value)
 {
-    AccidentDeathModifier = value;
+    AccidentDeathModifier = float(value);
 }
 
 LiveObjectCharacters_s DNA::getCharacters() const

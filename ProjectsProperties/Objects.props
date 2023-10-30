@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
 
   <PropertyGroup>
-    <IncludePath>$(SolutionDir)\Sources\Objects;$(SolutionDir)\Sources\Objects\Classes;$(SolutionDir)\Sources\Objects\Interfaces;$(SolutionDir)\Sources\Objects\Structs;$(SolutionDir)\Sources\Objects\ValuesTypes;</IncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)\Sources\Objects;$(SolutionDir)\Sources\Objects\Classes;$(SolutionDir)\Sources\Objects\Interfaces;$(SolutionDir)\Sources\Objects\Structs;$(SolutionDir)\Sources\Objects\ValuesTypes;</IncludePath>
   </PropertyGroup>
 
   <!-- Macros $(SolutionDir) not guaranteed to work in all scenarios -->
@@ -26,7 +26,6 @@
   </ItemGroup>
   <!-- Interfaces -->
   <ItemGroup>
-    <ClInclude Include="..\Sources\Objects\Interfaces\IContainerManager.h" />
     <ClInclude Include="..\Sources\Objects\Interfaces\IDamageIO.h" />
     <ClInclude Include="..\Sources\Objects\Interfaces\IExistancePoints.h" />
     <ClInclude Include="..\Sources\Objects\Interfaces\IimpactedObject.h" />

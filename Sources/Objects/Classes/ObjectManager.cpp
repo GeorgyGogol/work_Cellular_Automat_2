@@ -27,9 +27,9 @@ void ObjectManager::RefreshObjects()
 	for (itRefr; itRefr != ObjectsList.end(); ++itRefr) {
 		current = *itRefr;
 
-		if (!current->isAlive()) {
+		/*if (!current->isAlive()) {
 			current->addExistancePoints(-1);
-		}
+		}*/
 
 		if (!current->isExists()) {
 			ToDelete.push_back(current);
