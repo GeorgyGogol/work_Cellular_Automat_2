@@ -12,6 +12,11 @@ SurfaceCell::SurfaceCell(const CellLevels &levels)
 {
 }
 
+SurfaceCell::operator CellLevels() const
+{
+    return Level;
+}
+
 int SurfaceCell::getAltitude() const
 {
     return Level.Altitude;

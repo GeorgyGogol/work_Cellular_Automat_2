@@ -2,19 +2,18 @@
 
 #include "AbstractField.h"
 #include "ICellAccess.h"
-#include "SurfaceCell.h"
 
-class FieldSquare 
+class SimpleSquareTestField 
     : public BaseField
-    , public ICellAccess<SurfaceCell>
+    , public ICellAccess<int>
 {
 public:
-    FieldSquare(int height, int width);
-    virtual ~FieldSquare();
+    SimpleSquareTestField(int height, int width);
+    virtual ~SimpleSquareTestField();
 
 private:
     int Width;
-    SurfaceCell* Cells;
+    int* Cells;
 
     void CreateField() override;
     void DeleteField() override;
@@ -24,9 +23,9 @@ public:
 
     DirectionsStatuses& getDirectionsForPoint(int x, int y) const;
 
-    SurfaceCell getCellAt(int x, int y) const override;
+    int getCellAt(int x, int y) const override;
 
-    void setCellAt(int x, int y, const SurfaceCell& cell) override;
+    void setCellAt(int x, int y, const int& cell) override;
  
 
     //bool isCanMove(int x, int y, Direction dir) const;

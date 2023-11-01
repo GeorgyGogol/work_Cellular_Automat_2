@@ -12,16 +12,6 @@ BaseField::~BaseField()
     DeleteField();
 }
 
-BaseField::BaseField(const BaseField &src)
-{
-    CopyField(src);
-}
-
-BaseField::BaseField(BaseField &&from) noexcept
-{
-    MoveField(from);
-}
-
 int BaseField::getHeight() const
 {
     return Height;

@@ -13,6 +13,8 @@ public:
     //SurfaceCell(const SurfaceCell& src);
     //void operator=(const SurfaceCell& src);
 
+    operator CellLevels() const;
+
 private:
     CellLevels Level;
 
@@ -25,6 +27,8 @@ public:
     void changeLiquidCount(int delta);
     void setLiquidCount(int value);
     void setLiquidCount(int value, bool isUnderground);
+
+    //int getSurfaceLevel() const;
 
 };
 

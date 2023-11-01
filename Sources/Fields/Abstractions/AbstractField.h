@@ -10,16 +10,11 @@ public:
     BaseField(int height, int rawDirsCount);
     virtual ~BaseField();
 
-    BaseField(const BaseField& src);
-    BaseField(BaseField&& from) noexcept;
-
 private:
     Directions AvalableDirections;
 
     virtual void CreateField() = 0;
     virtual void DeleteField() = 0;
-    virtual void CopyField(const BaseField& src) = 0;
-    virtual void MoveField(BaseField&& src) noexcept = 0;
 
 protected:
     int Height;

@@ -16,9 +16,11 @@
   </ItemGroup>
   <!-- Classes -->
   <ItemGroup>
+    <ClInclude Include="..\Sources\Fields\Classes\SimpleSquareTestField.h" />
     <ClInclude Include="..\Sources\Fields\Classes\FieldSquare.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Sources\Fields\Classes\SimpleSquareTestField.cpp" />
     <ClCompile Include="..\Sources\Fields\Classes\FieldSquare.cpp" />
   </ItemGroup>
   <!-- Interfaces -->
