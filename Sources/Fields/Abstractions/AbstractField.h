@@ -13,9 +13,6 @@ public:
 private:
     Directions AvalableDirections;
 
-    virtual void CreateField() = 0;
-    virtual void DeleteField() = 0;
-
 protected:
     int Height;
 

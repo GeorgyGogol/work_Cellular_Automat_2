@@ -18,7 +18,20 @@ Point::Point(const Point& src)
     Y = src.Y;
 }
 
-Point Point::operator+(const Point& val) const
+bool Point::operator==(const Point& val) const
+{
+    bool bX, bY;
+    bX = X == val.X;
+    bY = Y == val.Y;
+    return bX && bY;
+}
+
+bool Point::operator!=(const Point& val) const
+{
+    return !(*this == val);
+}
+
+Point& Point::operator+(const Point& val) const
 {
     Point out;
     out.X = X + val.X;
@@ -32,19 +45,6 @@ Point Point::operator-(const Point& val) const
     out.X = X - val.X;
     out.Y = Y - val.Y;
     return out;
-}
-
-bool Point::operator==(const Point& val) const
-{
-    bool bX, bY;
-    bX = X == val.X;
-    bY = Y == val.Y;
-    return bX && bY;
-}
-
-bool Point::operator!=(const Point& val) const
-{
-    return !(*this == val);
 }
 
 Point Point::operator=(const Point& src)
@@ -110,6 +110,11 @@ std::string Point::s_str() const
     out += ")";
 
     return out;
+}
+
+const char* Point::c_str() const
+{
+    return s_str().c_str();
 }
 
 Point Point::GetVectorTo(const Point& aim) const

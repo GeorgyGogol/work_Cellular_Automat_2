@@ -7,7 +7,11 @@ class DirectionsStatuses
 {
 public:
     DirectionsStatuses(int nDirs);
-    ~DirectionsStatuses();
+    
+    virtual ~DirectionsStatuses();
+
+public:
+    
 
 private:
     bool* DirectionsStats;

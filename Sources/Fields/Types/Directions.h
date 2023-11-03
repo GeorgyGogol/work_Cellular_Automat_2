@@ -6,8 +6,11 @@ class Directions
 {
 public:
     Directions(int nDirs);
-    //Directions(int rawDirection, int nDirs);
-    //Directions(const Directions& src);
+    Directions(Direction maxDirection);
+
+    virtual ~Directions() = default;
+
+    operator int();
 
 private:
     unsigned short int NDirections;
@@ -15,7 +18,7 @@ private:
 protected:
 
 public:
-    int getDirections() const;
+    int getRawDirections() const;
     bool isDirectValide(int direction) const;
     void normalize(int& rawDirection) const;
     

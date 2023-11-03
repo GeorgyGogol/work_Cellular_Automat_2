@@ -20,7 +20,11 @@
   <!-- Fields -->
   <Import Project="Fields.props" />
   <ItemGroup>
-    <ClCompile Include="Fields\test_Direction.cpp" />
     <ClCompile Include="Fields\test_Point.cpp" />
+    <ClCompile Include="Fields\test_Direction.cpp" />
+    <ClCompile Include="Fields\test_Directions.cpp" />
+    <ClCompile Include="Fields\test_DirectionStatuses.cpp" />
   </ItemGroup>
+
+  <!-- Objects -->
 </Project>

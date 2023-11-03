@@ -23,23 +23,23 @@
     <ClCompile Include="..\Sources\Fields\Classes\SimpleSquareTestField.cpp">
       <Filter>Sources\Fields</Filter>
     </ClCompile>
-    <ClCompile Include="Fields\test_Direction.cpp">
-      <Filter>Tests\Cells</Filter>
-    </ClCompile>
     <ClCompile Include="Cells\test_CellLevels.cpp">
       <Filter>Tests\Cells</Filter>
-    </ClCompile>
-    <ClCompile Include="Fields\test_Point.cpp">
-      <Filter>Tests\Fields</Filter>
-    </ClCompile>
-    <ClCompile Include="Cells\test_SurfaceCell.cpp">
-      <Filter>Tests\Fields</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Types\Point.cpp">
       <Filter>Sources\Fields\Types</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Types\Direction.cpp">
       <Filter>Sources\Fields\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Fields\test_Point.cpp">
+      <Filter>Tests\Fields\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Fields\test_Direction.cpp">
+      <Filter>Tests\Fields\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Cells\test_SurfaceCell.cpp">
+      <Filter>Tests\Cells</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +96,9 @@
     </Filter>
     <Filter Include="Sources\Fields\Types">
       <UniqueIdentifier>{f0ccd7ea-0fb2-48e6-8d33-3122f430774a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\Fields\Types">
+      <UniqueIdentifier>{3ed90a46-86c6-48c9-893a-d32fc0aefa67}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -10,45 +10,15 @@ FieldSquare::~FieldSquare()
 {
 }
 
-void FieldSquare::CreateField() override
+void FieldSquare::CreateField()
 {
     Cells = new SurfaceCell[Height * Width];
 }
 
-void FieldSquare::DeleteField() override
+void FieldSquare::DeleteField()
 {
     delete[] Cells;
     Cells = nullptr;
-}
-
-void FieldSquare::CopyField(const BaseField& src) override
-{
-    FieldSquare* base = static_cast<FieldSquare*>(&src);
-
-    if(Cells) DeleteField();
-
-    Width = base->Width;
-    Height = base->Height;
-
-    CreateField();
-
-    for (int i = 0; i < Width * Height; ++i)
-    {
-        Cells[i] = base->Cells[i];
-    }
-}
-
-void FieldSquare::MoveField(BaseField&& src) noexcept override
-{
-    FieldSquare* base = static_cast<FieldSquare*>(&src);
-
-    if(Cells) DeleteField();
-
-    Width = base->Width;
-    Height = base->Height;
-
-    Cells = base->Cells;
-    base->Cells = nullptr;
 }
 
 int FieldSquare::getWidth(int onHeight) const
@@ -58,14 +28,14 @@ int FieldSquare::getWidth(int onHeight) const
 
 DirectionsStatuses& FieldSquare::getDirectionsForPoint(int x, int y) const
 {
-    if (!isCoordValide(x, y)) return;
-    DirectionsStatuses out(AvalableDirections);
+    //if (!isCoordValide(x, y)) return;
+    DirectionsStatuses out(0); // (AvalableDirections);
     return out;
 }
 
 SurfaceCell FieldSquare::getCellAt(int x, int y) const
 {
-    if (!isCoordValide(x, y)) return;
+    if (!isCoordValide(x, y)) return SurfaceCell();
     return Cells[x + y * Width];
 }
 

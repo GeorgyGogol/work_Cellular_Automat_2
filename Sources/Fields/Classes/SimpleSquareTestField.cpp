@@ -27,14 +27,14 @@ int SimpleSquareTestField::getWidth(int onHeight) const
 
 DirectionsStatuses &SimpleSquareTestField::getDirectionsForPoint(int x, int y) const
 {
-    if (!isCoordValide(x, y)) return;
-    DirectionsStatuses out(AvalableDirections);
+    //if (!isCoordValide(x, y)) return DirectionsStatuses();
+    DirectionsStatuses out (4); // (getGeneralDirections());
     return out;
 }
 
 int SimpleSquareTestField::getCellAt(int x, int y) const
 {
-    if (!isCoordValide(x, y)) return;
+    if (!isCoordValide(x, y)) return 0;
     return Cells[x + y * Width];
 }
 

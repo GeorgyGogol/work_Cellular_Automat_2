@@ -4,12 +4,12 @@ BaseField::BaseField(int height, int rawDirsCount)
     : Height(height)
     , AvalableDirections(rawDirsCount)
 {
-    CreateField();
+    //CreateField();
 }
 
 BaseField::~BaseField()
 {
-    DeleteField();
+    //DeleteField();
 }
 
 int BaseField::getHeight() const

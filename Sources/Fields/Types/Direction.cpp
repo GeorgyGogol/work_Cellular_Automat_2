@@ -22,16 +22,6 @@ Direction &Direction::operator=(const Direction &src)
     return *this;
 }
 
-bool Direction::operator==(const Direction &rightVal)
-{
-    return Azimuth == rightVal.Azimuth;
-}
-
-bool Direction::operator!=(const Direction &rightVal)
-{
-    return !(*this == rightVal);
-}
-
 Direction::operator int()
 {
     return Azimuth;
@@ -40,5 +30,15 @@ Direction::operator int()
 Direction::operator bool()
 {
     return Access;
+}
+
+bool Direction::operator==(const Direction &rightVal)
+{
+    return Azimuth == rightVal.Azimuth;
+}
+
+bool Direction::operator!=(const Direction &rightVal)
+{
+    return !(*this == rightVal);
 }
 

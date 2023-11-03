@@ -5,13 +5,17 @@ Directions::Directions(int nDirs)
 {
 }
 
-/* Directions::Directions(int direction, int nDirs)
-    : NDirections(nDirs)
-    , Azimuth(direction)
+Directions::Directions(Direction maxDirection)
+    : NDirections(int(maxDirection))
 {
-} */
+}
 
-int Directions::getDirections() const
+Directions::operator int()
+{
+    return int(NDirections);
+}
+
+int Directions::getRawDirections() const
 {
     return int(NDirections);
 }
