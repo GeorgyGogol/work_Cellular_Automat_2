@@ -9,6 +9,8 @@ public:
     Point(int x, int y);
     Point(const Point&);
     
+    Point operator=(const Point& src);
+    
     ~Point() = default;
 
 public:
@@ -16,7 +18,6 @@ public:
     Point operator-(const Point& val) const;
     bool operator==(const Point& val) const;
     bool operator!=(const Point& val) const;
-    Point operator=(const Point& src);
     Point operator+=(const Point& src);
     Point operator-=(const Point& src);
     Point operator--();

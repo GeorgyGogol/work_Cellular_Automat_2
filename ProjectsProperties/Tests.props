@@ -3,12 +3,24 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <OutDir>$(SolutionDir)\.BuildDir\$(Configuration)\TestProject</OutDir>
+    <OutDir>$(SolutionDir)\.BuildDir\$(Configuration)\TestProject\</OutDir>
     <IntDir>.BuildDir\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup>
     <IncludePath>$(IncludePath);$(ProjectDir);$(ProjectDir)\Cells;$(ProjectDir)\Fields;$(ProjectDir)\General;$(ProjectDir)\Objects;</IncludePath>
   </PropertyGroup>
-  
-  
+
+  <!-- Cells -->
+  <Import Project="Cells.props" />
+  <ItemGroup>
+    <ClCompile Include="Cells\test_SurfaceCell.cpp" />
+    <ClCompile Include="Cells\test_CellLevels.cpp" />
+  </ItemGroup>
+
+  <!-- Fields -->
+  <Import Project="Fields.props" />
+  <ItemGroup>
+    <ClCompile Include="Fields\test_Direction.cpp" />
+    <ClCompile Include="Fields\test_Point.cpp" />
+  </ItemGroup>
 </Project>

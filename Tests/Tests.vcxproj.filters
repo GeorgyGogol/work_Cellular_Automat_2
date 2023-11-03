@@ -2,13 +2,100 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="..\Sources\Cells\Structs\CellLevels.cpp">
+      <Filter>Sources\Cells</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Cells\Classes\SurfaceCell.cpp">
+      <Filter>Sources\Cells</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Abstractions\AbstractField.cpp">
+      <Filter>Sources\Fields</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Types\Directions.cpp">
+      <Filter>Sources\Fields</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Types\DirectionsStatuses.cpp">
+      <Filter>Sources\Fields</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Classes\FieldSquare.cpp">
+      <Filter>Sources\Fields</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Classes\SimpleSquareTestField.cpp">
+      <Filter>Sources\Fields</Filter>
+    </ClCompile>
+    <ClCompile Include="Fields\test_Direction.cpp">
+      <Filter>Tests\Cells</Filter>
+    </ClCompile>
+    <ClCompile Include="Cells\test_CellLevels.cpp">
+      <Filter>Tests\Cells</Filter>
+    </ClCompile>
+    <ClCompile Include="Fields\test_Point.cpp">
+      <Filter>Tests\Fields</Filter>
+    </ClCompile>
+    <ClCompile Include="Cells\test_SurfaceCell.cpp">
+      <Filter>Tests\Fields</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Types\Point.cpp">
+      <Filter>Sources\Fields\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Types\Direction.cpp">
+      <Filter>Sources\Fields\Types</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="..\Sources\Cells\Structs\CellLevels.h">
+      <Filter>Sources\Cells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Cells\Classes\SurfaceCell.h">
+      <Filter>Sources\Cells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Abstractions\AbstractField.h">
+      <Filter>Sources\Fields</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Types\Directions.h">
+      <Filter>Sources\Fields</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Types\DirectionsStatuses.h">
+      <Filter>Sources\Fields</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Classes\FieldSquare.h">
+      <Filter>Sources\Fields</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Interfaces\ICellAccess.h">
+      <Filter>Sources\Fields</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Classes\SimpleSquareTestField.h">
+      <Filter>Sources\Fields</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Types\Point.h">
+      <Filter>Sources\Fields\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Types\Direction.h">
+      <Filter>Sources\Fields\Types</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Tests">
       <UniqueIdentifier>{2bb478ac-c1c0-4a7c-809f-5aaddd72fdf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{a041ec31-0d0f-453b-a0a2-0f6eabdfdb6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Cells">
+      <UniqueIdentifier>{acb5e2f6-344e-4454-94d7-ae7b899aa862}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Fields">
+      <UniqueIdentifier>{c1194419-a8d2-4ecf-abb7-4e2690f70d24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\Cells">
+      <UniqueIdentifier>{a84fc1fc-09cf-409c-9173-e59512af41d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\Fields">
+      <UniqueIdentifier>{73cb2505-6903-4487-9b21-febd7c1f7689}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Fields\Types">
+      <UniqueIdentifier>{f0ccd7ea-0fb2-48e6-8d33-3122f430774a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
