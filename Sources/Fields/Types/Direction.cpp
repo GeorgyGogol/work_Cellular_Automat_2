@@ -32,12 +32,12 @@ Direction::operator bool()
     return Access;
 }
 
-bool Direction::operator==(const Direction &rightVal)
+bool Direction::operator==(const Direction &rightVal) const
 {
     return Azimuth == rightVal.Azimuth;
 }
 
-bool Direction::operator!=(const Direction &rightVal)
+bool Direction::operator!=(const Direction &rightVal) const
 {
     return !(*this == rightVal);
 }

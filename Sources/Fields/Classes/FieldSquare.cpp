@@ -4,21 +4,12 @@ FieldSquare::FieldSquare(int height, int width)
     : BaseField(height, 8)
     , Width(width)
 {
+    Cells = new SurfaceCell[Height * Width];
 }
 
 FieldSquare::~FieldSquare()
 {
-}
-
-void FieldSquare::CreateField()
-{
-    Cells = new SurfaceCell[Height * Width];
-}
-
-void FieldSquare::DeleteField()
-{
     delete[] Cells;
-    Cells = nullptr;
 }
 
 int FieldSquare::getWidth(int onHeight) const
@@ -26,7 +17,7 @@ int FieldSquare::getWidth(int onHeight) const
     return Width;
 }
 
-DirectionsStatuses& FieldSquare::getDirectionsForPoint(int x, int y) const
+DirectionsStatuses FieldSquare::getDirectionsForPoint(int x, int y) const
 {
     //if (!isCoordValide(x, y)) return;
     DirectionsStatuses out(0); // (AvalableDirections);

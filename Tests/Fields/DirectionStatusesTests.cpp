@@ -13,7 +13,7 @@ public:
     int Count_GetStatus = 0;
     int Count_SetStatus = 0;
 
-    bool getStatus(int direction) const {
+    bool getStatus(int direction) {
         ++Count_GetStatus;
         return Base::getStatus(direction);
     }
@@ -26,46 +26,53 @@ public:
     //Direction getDirection(int rawDirection) const override;
 };
 
-/* class SurfaceCellTests : public ::testing::Test
-{
-protected:
-    struct TestStruct
-    {
-        int Direction;
-        bool Input;
-        //int CorrectDirection;
-        //bool Expect;
-    }
-    std::vector<TestStruct> StatusTestValues;
-    std::vector<TestStruct> StatusTestValues_Di;
-
-protected:
-    void SetUp()
-    {
-        // StatusTestValues
-        StatusTestValues.push_back({-1, false});
-        StatusTestValues.push_back({0, false});
-        StatusTestValues.push_back({3, false});
-        StatusTestValues.push_back({4, false});
-        StatusTestValues.push_back({12, false});
-        StatusTestValues.push_back({0, true});
-    }
-
-}; */
-
-TEST(DirectionsStatusesTest, Base)
+TEST(DirectionStatusesTest, Base)
 {
     DirectionsStatuses dirs(4);
 
     for (int i = 0; i < dirs.getRawDirections(); ++i) {
-        EXPECT_TRUE(dirs.getStatus(i));
+        EXPECT_TRUE(dirs.getStatus(i)) << "Fail at " << i;
     }
 
     dirs.setStatus(1, false);
     ASSERT_FALSE(dirs.getStatus(1));
 }
 
-TEST(DirectionsStatusesTest, SetStatuses)
+TEST(DirectionStatusesTest, CopyAssignConstructor)
+{
+    DirectionsStatuses dirsOne(8);
+    DirectionsStatuses dirsTwo(dirsOne);
+
+    ASSERT_EQ(dirsTwo.getRawDirections(), dirsOne.getRawDirections());
+    for (int i = 0; i < dirsTwo.getRawDirections(); ++i) {
+        EXPECT_EQ(dirsTwo.getDirection(i), dirsOne.getDirection(i));
+    }
+}
+
+TEST(DirectionStatusesTest, CopyAssignOperator)
+{
+    DirectionsStatuses dirsOne(8);
+    DirectionsStatuses dirsTwo(0);
+
+    dirsTwo = dirsOne;
+
+    ASSERT_EQ(dirsTwo.getRawDirections(), dirsOne.getRawDirections());
+    for (int i = 0; i < dirsTwo.getRawDirections(); ++i) {
+        EXPECT_EQ(dirsTwo.getDirection(i), dirsOne.getDirection(i));
+    }
+}
+
+TEST(DirectionStatusesTest, MoveAssignConstructor)
+{
+    FAIL();
+}
+
+TEST(DirectionStatusesTest, MoveAssignOperator)
+{
+    FAIL();
+}
+
+TEST(DirectionStatusesTest, SetStatuses)
 {
     testClass dirs(4);
     int settersRealCall = 0;
@@ -89,7 +96,7 @@ TEST(DirectionsStatusesTest, SetStatuses)
     settersRealCall += range_max - range_min;
     ASSERT_EQ(dirs.Count_SetStatus, settersRealCall);
 
-    bool[] statusesMap = {false, false, true, true};
+    bool statusesMap[] = {false, false, true, true};
     for (int i = 0; i < 4; ++i)
     {
         EXPECT_EQ(dirs.getStatus(i), statusesMap[i]);
@@ -97,7 +104,7 @@ TEST(DirectionsStatusesTest, SetStatuses)
     ASSERT_EQ(dirs.Count_GetStatus, 8);
 }
 
-TEST(DirectionsStatusesTest, GetDirection)
+TEST(DirectionStatusesTest, GetDirection)
 {
     DirectionsStatuses dirs(4);
     dirs.setStatus(3, false);
@@ -105,11 +112,11 @@ TEST(DirectionsStatusesTest, GetDirection)
 
     dir = dirs.getDirection(1);
     ASSERT_EQ(dir.Azimuth, 1);
-    ASSERT_EQ(dir.Access, true);
+    ASSERT_TRUE(dir.Access);
 
     dir = dirs.getDirection(3);
     ASSERT_EQ(dir.Azimuth, 3);
-    ASSERT_EQ(dir.Access, false);
+    ASSERT_FALSE(dir.Access);
 
 }
 

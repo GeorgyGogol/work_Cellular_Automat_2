@@ -15,13 +15,12 @@ private:
     int Width;
     int* Cells;
 
-    void CreateField() override;
-    void DeleteField() override;
+    int CellAt(int x, int y) const;
 
 public:
     int getWidth(int onHeight = 0) const override;
 
-    DirectionsStatuses& getDirectionsForPoint(int x, int y) const;
+    DirectionsStatuses getDirectionsForPoint(int x, int y) const;
 
     int getCellAt(int x, int y) const override;
 

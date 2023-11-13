@@ -13,17 +13,18 @@
   <!-- Cells -->
   <Import Project="Cells.props" />
   <ItemGroup>
-    <ClCompile Include="Cells\test_SurfaceCell.cpp" />
-    <ClCompile Include="Cells\test_CellLevels.cpp" />
+    <ClCompile Include="Cells\SurfaceCellTests.cpp" />
+    <ClCompile Include="Cells\CellLevelsTests.cpp" />
   </ItemGroup>
 
   <!-- Fields -->
   <Import Project="Fields.props" />
   <ItemGroup>
-    <ClCompile Include="Fields\test_Point.cpp" />
-    <ClCompile Include="Fields\test_Direction.cpp" />
-    <ClCompile Include="Fields\test_Directions.cpp" />
-    <ClCompile Include="Fields\test_DirectionStatuses.cpp" />
+    <ClCompile Include="Fields\PointTests.cpp" />
+    <ClCompile Include="Fields\DirectionTests.cpp" />
+    <ClCompile Include="Fields\DirectionsTests.cpp" />
+    <ClCompile Include="Fields\DirectionStatusesTests.cpp" />
+    <ClCompile Include="Fields\SimpleSquareTestTests.cpp" />
   </ItemGroup>
 
   <!-- Objects -->

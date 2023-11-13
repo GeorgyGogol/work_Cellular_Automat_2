@@ -8,23 +8,8 @@
     <ClCompile Include="..\Sources\Cells\Classes\SurfaceCell.cpp">
       <Filter>Sources\Cells</Filter>
     </ClCompile>
-    <ClCompile Include="..\Sources\Fields\Abstractions\AbstractField.cpp">
-      <Filter>Sources\Fields</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Sources\Fields\Types\Directions.cpp">
-      <Filter>Sources\Fields</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Sources\Fields\Types\DirectionsStatuses.cpp">
-      <Filter>Sources\Fields</Filter>
-    </ClCompile>
     <ClCompile Include="..\Sources\Fields\Classes\FieldSquare.cpp">
       <Filter>Sources\Fields</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Sources\Fields\Classes\SimpleSquareTestField.cpp">
-      <Filter>Sources\Fields</Filter>
-    </ClCompile>
-    <ClCompile Include="Cells\test_CellLevels.cpp">
-      <Filter>Tests\Cells</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Types\Point.cpp">
       <Filter>Sources\Fields\Types</Filter>
@@ -32,14 +17,38 @@
     <ClCompile Include="..\Sources\Fields\Types\Direction.cpp">
       <Filter>Sources\Fields\Types</Filter>
     </ClCompile>
-    <ClCompile Include="Fields\test_Point.cpp">
+    <ClCompile Include="..\Sources\Fields\Abstractions\AbstractField.cpp">
+      <Filter>Sources\Fields\NotTested</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Types\Directions.cpp">
+      <Filter>Sources\Fields\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Types\DirectionsStatuses.cpp">
+      <Filter>Sources\Fields\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Fields\DirectionsTests.cpp">
       <Filter>Tests\Fields\Types</Filter>
     </ClCompile>
-    <ClCompile Include="Fields\test_Direction.cpp">
+    <ClCompile Include="Fields\DirectionTests.cpp">
       <Filter>Tests\Fields\Types</Filter>
     </ClCompile>
-    <ClCompile Include="Cells\test_SurfaceCell.cpp">
+    <ClCompile Include="Fields\PointTests.cpp">
+      <Filter>Tests\Fields\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Fields\DirectionStatusesTests.cpp">
+      <Filter>Tests\Fields\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Cells\SurfaceCellTests.cpp">
       <Filter>Tests\Cells</Filter>
+    </ClCompile>
+    <ClCompile Include="Fields\SimpleSquareTestTests.cpp">
+      <Filter>Tests\Fields</Filter>
+    </ClCompile>
+    <ClCompile Include="Cells\CellLevelsTests.cpp">
+      <Filter>Tests\Cells</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Classes\SimpleSquareTestField.cpp">
+      <Filter>Sources\Fields\Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -50,22 +59,7 @@
     <ClInclude Include="..\Sources\Cells\Classes\SurfaceCell.h">
       <Filter>Sources\Cells</Filter>
     </ClInclude>
-    <ClInclude Include="..\Sources\Fields\Abstractions\AbstractField.h">
-      <Filter>Sources\Fields</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Sources\Fields\Types\Directions.h">
-      <Filter>Sources\Fields</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Sources\Fields\Types\DirectionsStatuses.h">
-      <Filter>Sources\Fields</Filter>
-    </ClInclude>
     <ClInclude Include="..\Sources\Fields\Classes\FieldSquare.h">
-      <Filter>Sources\Fields</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Sources\Fields\Interfaces\ICellAccess.h">
-      <Filter>Sources\Fields</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Sources\Fields\Classes\SimpleSquareTestField.h">
       <Filter>Sources\Fields</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Types\Point.h">
@@ -73,6 +67,21 @@
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Types\Direction.h">
       <Filter>Sources\Fields\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Abstractions\AbstractField.h">
+      <Filter>Sources\Fields\NotTested</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Interfaces\ICellAccess.h">
+      <Filter>Sources\Fields\NotTested</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Types\Directions.h">
+      <Filter>Sources\Fields\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Types\DirectionsStatuses.h">
+      <Filter>Sources\Fields\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Classes\SimpleSquareTestField.h">
+      <Filter>Sources\Fields\Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +108,15 @@
     </Filter>
     <Filter Include="Tests\Fields\Types">
       <UniqueIdentifier>{3ed90a46-86c6-48c9-893a-d32fc0aefa67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Fields\NotTested">
+      <UniqueIdentifier>{6911c071-5027-4d34-ae09-be1585400516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\Fields\Classes">
+      <UniqueIdentifier>{780dca56-cf09-4bf9-ae5c-f5bff609b1af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Fields\Classes">
+      <UniqueIdentifier>{0a891395-6e0c-48f0-8a60-7243480ae1b4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

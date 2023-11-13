@@ -9,7 +9,7 @@ TEST(DirectionTests, Base)
     ASSERT_TRUE(dir.Access);
 
     dir = Direction(4, false);
-    ASSERT_EQ(dir.Azimuth, 4);
+    ASSERT_EQ(dir.Azimuth, 4);  
     ASSERT_FALSE(dir.Access);
 
     ASSERT_EQ(int(dir), 4) << "Operator int is not worked";

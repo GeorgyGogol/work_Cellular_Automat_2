@@ -24,7 +24,7 @@ public:
     virtual bool isCoordValide(int x, int y) const;
     inline bool isCoordValide(Point p) const { return isCoordValide(p.X, p.Y); }
 
-    virtual DirectionsStatuses& getDirectionsForPoint(int x, int y) const = 0;
+    virtual DirectionsStatuses getDirectionsForPoint(int x, int y) const = 0;
 
 };
 

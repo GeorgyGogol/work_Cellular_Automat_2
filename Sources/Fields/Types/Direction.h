@@ -16,8 +16,8 @@ public:
     operator bool();
 
 public:
-    bool operator==(const Direction& rightVal);
-    bool operator!=(const Direction& rightVal);
+    bool operator==(const Direction& rightVal) const;
+    bool operator!=(const Direction& rightVal) const;
 
 public:
     int Azimuth = 0;

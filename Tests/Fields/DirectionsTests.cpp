@@ -29,10 +29,10 @@ TEST(DirectionsTests, DirectionValide)
 TEST(DirectionsTests, DirectionNormalize)
 {
     Directions dirs(4);
-    int[] testDirections = {5, -1, 4, 3, 1};
-    int[] correctDirects = {1, 3, 0, 3, 1};
+    int testDirections[] = {5, -1, 4, 3, 1};
+    int correctDirects[] = {1, 3, 0, 3, 1};
 
-    for (int i = 0; i < 5 + 1; ++i) {
+    for (int i = 0; i < 5; ++i) {
         int el = testDirections[i];
         dirs.normalize(el);
         EXPECT_EQ(el, correctDirects[i]);
@@ -42,10 +42,10 @@ TEST(DirectionsTests, DirectionNormalize)
 TEST(DirectionsTests, DirectionGetter)
 {
     Directions dirs(4);
-    int[] testDirections = {5, -1, 4, 3, 1};
-    Direction[] correctDirects = {1, 3, 0, 3, 1};
+    int testDirections[] = {5, -1, 4, 3, 1};
+    Direction correctDirects[] = {1, 3, 0, 3, 1};
 
-    for (int i = 0; i < 5 + 1; ++i) {
+    for (int i = 0; i < 5; ++i) {
         int el = testDirections[i];
         Direction test_dir = dirs.getDirection(el);
         EXPECT_EQ(test_dir, correctDirects[i]);

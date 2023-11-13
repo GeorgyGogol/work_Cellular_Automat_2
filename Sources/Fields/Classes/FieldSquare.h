@@ -16,13 +16,10 @@ private:
     int Width;
     SurfaceCell* Cells;
 
-    void CreateField() override;
-    void DeleteField() override;
-
 public:
     int getWidth(int onHeight = 0) const override;
 
-    DirectionsStatuses& getDirectionsForPoint(int x, int y) const;
+    DirectionsStatuses getDirectionsForPoint(int x, int y) const;
 
     SurfaceCell getCellAt(int x, int y) const override;
 
