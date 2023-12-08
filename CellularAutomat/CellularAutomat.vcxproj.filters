@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="Forms">
+      <UniqueIdentifier>{de5eb8d7-4b34-4e35-97e6-ed2c77792df5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Forms\MapEditor">
+      <UniqueIdentifier>{aeedeafc-3fd6-4820-8308-6fa3d10dfd89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{3460f89a-ba4b-4da5-90c5-1b2329f2bfd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pch">
+      <UniqueIdentifier>{dd8ed812-d83f-483c-ae19-bcd05c95b8d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Forms\ObjectsEditor">
+      <UniqueIdentifier>{15fe8bef-a180-46e1-9fe1-413552f5641e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Forms\StartMenu">
+      <UniqueIdentifier>{03d22564-6c46-4e05-b833-2a99faf04a42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Forms\MapEditor\MapEditor.cpp">
+      <Filter>Forms\MapEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\AppCore.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>pch</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Forms\ObjectsEditor\ObjectsEditor.cpp">
+      <Filter>Forms\ObjectsEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Forms\StartMenu\StartMenu.cpp">
+      <Filter>Forms\StartMenu</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="Forms\MapEditor\MapEditor.h">
+      <Filter>Forms\MapEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="Classes\AppCore.h">
+      <Filter>Classes</Filter>
+    </QtMoc>
+    <QtMoc Include="Forms\ObjectsEditor\ObjectsEditor.h">
+      <Filter>Forms\ObjectsEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="Forms\StartMenu\StartMenu.h">
+      <Filter>Forms\StartMenu</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="Forms\MapEditor\MapEditor.ui">
+      <Filter>Forms\MapEditor</Filter>
+    </QtUic>
+    <QtUic Include="Forms\ObjectsEditor\ObjectsEditor.ui">
+      <Filter>Forms\ObjectsEditor</Filter>
+    </QtUic>
+    <QtUic Include="Forms\StartMenu\StartMenu.ui">
+      <Filter>Forms\StartMenu</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>pch</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="Resources\MainResources.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+</Project>
