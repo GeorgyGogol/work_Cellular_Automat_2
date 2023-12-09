@@ -1,7 +1,7 @@
 #include "SimpleSquareTestField.h"
 
 SimpleSquareTestField::SimpleSquareTestField(int height, int width)
-    : BaseField(height, 8)
+    : AbstractField(height, 8)
     , Width(width)
 {
     Cells = new int[Height * Width] {0} ;

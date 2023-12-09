@@ -1,26 +1,26 @@
 #include "AbstractField.h"
 
-BaseField::BaseField(int height, int rawDirsCount)
+AbstractField::AbstractField(int height, int rawDirsCount)
     : Height(height)
     , AvalableDirections(rawDirsCount)
 {
 }
 
-BaseField::~BaseField()
+AbstractField::~AbstractField()
 {
 }
 
-int BaseField::getHeight() const
+int AbstractField::getHeight() const
 {
     return Height;
 }
 
-Directions BaseField::getGeneralDirections() const
+Directions AbstractField::getGeneralDirections() const
 {
     return AvalableDirections;
 }
 
-bool BaseField::isCoordValide(int x, int y) const
+bool AbstractField::isCoordValide(int x, int y) const
 {
     bool res = true;
 

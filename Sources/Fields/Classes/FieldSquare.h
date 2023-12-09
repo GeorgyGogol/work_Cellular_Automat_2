@@ -5,7 +5,7 @@
 #include "SurfaceCell.h"
 
 class FieldSquare 
-    : public BaseField
+    : public AbstractField
     , public ICellAccess<SurfaceCell>
 {
 public:

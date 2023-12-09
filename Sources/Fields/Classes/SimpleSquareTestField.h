@@ -3,8 +3,8 @@
 #include "AbstractField.h"
 #include "ICellAccess.h"
 
-class SimpleSquareTestField 
-    : public BaseField
+class SimpleSquareTestField
+    : public AbstractField
     , public ICellAccess<int>
 {
 public:

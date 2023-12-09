@@ -4,11 +4,11 @@
 #include "DirectionsStatuses.h"
 #include "Point.h"
 
-class BaseField
+class AbstractField
 {
 public:
-    BaseField(int height, int rawDirsCount);
-    virtual ~BaseField();
+    AbstractField(int height, int rawDirsCount);
+    virtual ~AbstractField();
 
 private:
     Directions AvalableDirections;

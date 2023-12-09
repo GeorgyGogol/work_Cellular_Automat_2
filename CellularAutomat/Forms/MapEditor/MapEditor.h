@@ -23,5 +23,8 @@ protected:
 signals:
     void Closed();
 
+public slots:
+    void on_action_CreateNewMap_triggered();
+
 };
 

@@ -27,6 +27,9 @@
     <Filter Include="Forms\StartMenu">
       <UniqueIdentifier>{03d22564-6c46-4e05-b833-2a99faf04a42}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Widgets">
+      <UniqueIdentifier>{0bd96c2a-7d9f-4255-b9f9-615e3db1e81e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Forms\MapEditor\MapEditor.cpp">
@@ -45,6 +48,9 @@
     <ClCompile Include="Forms\StartMenu\StartMenu.cpp">
       <Filter>Forms\StartMenu</Filter>
     </ClCompile>
+    <ClCompile Include="Forms\MapEditor\MapSettings.cpp">
+      <Filter>Forms\MapEditor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Forms\MapEditor\MapEditor.h">
@@ -59,6 +65,9 @@
     <QtMoc Include="Forms\StartMenu\StartMenu.h">
       <Filter>Forms\StartMenu</Filter>
     </QtMoc>
+    <QtMoc Include="Forms\MapEditor\MapSettings.h">
+      <Filter>Forms\MapEditor</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="Forms\MapEditor\MapEditor.ui">
@@ -69,6 +78,9 @@
     </QtUic>
     <QtUic Include="Forms\StartMenu\StartMenu.ui">
       <Filter>Forms\StartMenu</Filter>
+    </QtUic>
+    <QtUic Include="Forms\MapEditor\MapSettings.ui">
+      <Filter>Forms\MapEditor</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>

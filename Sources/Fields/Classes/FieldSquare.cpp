@@ -1,7 +1,7 @@
 #include "FieldSquare.h"
 
 FieldSquare::FieldSquare(int height, int width)
-    : BaseField(height, 8)
+    : AbstractField(height, 8)
     , Width(width)
 {
     Cells = new SurfaceCell[Height * Width];
