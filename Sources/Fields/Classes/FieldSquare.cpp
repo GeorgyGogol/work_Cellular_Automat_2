@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "FieldSquare.h"
 
 FieldSquare::FieldSquare(int height, int width)

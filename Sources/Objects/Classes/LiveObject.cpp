@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "LiveObject.h"
 
 LiveObject::LiveObject(const DNA &dna)

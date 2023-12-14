@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Direction.h"
 
 Direction::Direction(int rawDirection, bool accessable)

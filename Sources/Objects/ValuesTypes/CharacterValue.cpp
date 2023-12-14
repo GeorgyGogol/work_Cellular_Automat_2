@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "CharacterValue.h"
 
 CharacterValue::CharacterValue(const CharacterValue &src)

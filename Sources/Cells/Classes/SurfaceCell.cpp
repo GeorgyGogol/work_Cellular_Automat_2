@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "SurfaceCell.h"
 
 SurfaceCell::SurfaceCell()

@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "AbstractField.h"
 
 AbstractField::AbstractField(int height, int rawDirsCount)

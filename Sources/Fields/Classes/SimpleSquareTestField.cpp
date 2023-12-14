@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "SimpleSquareTestField.h"
 
 SimpleSquareTestField::SimpleSquareTestField(int height, int width)

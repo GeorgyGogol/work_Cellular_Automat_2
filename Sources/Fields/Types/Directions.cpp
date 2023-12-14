@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "Directions.h"
 
 Directions::Directions(int nDirs)

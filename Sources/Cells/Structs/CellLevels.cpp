@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "CellLevels.h"
 
 int SurfaceLevel(const CellLevels &info)

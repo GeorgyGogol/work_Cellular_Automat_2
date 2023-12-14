@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "DirectionsStatuses.h"
 
 DirectionsStatuses::DirectionsStatuses(int nDirs)
