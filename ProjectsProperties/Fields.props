@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
 
   <PropertyGroup>
-    <IncludePath>$(IncludePath);$(SolutionDir)\Sources\Fields;$(SolutionDir)\Sources\Fields\Abstractions;$(SolutionDir)\Sources\Fields\Classes;$(SolutionDir)\Sources\Fields\Interfaces;$(SolutionDir)\Sources\Fields\Types;</IncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)\Sources\Fields;$(SolutionDir)\Sources\Fields\Abstractions;$(SolutionDir)\Sources\Fields\Classes;$(SolutionDir)\Sources\Fields\Interfaces;$(SolutionDir)\Sources\Fields\IO;$(SolutionDir)\Sources\Fields\Manager;$(SolutionDir)\Sources\Fields\Types;</IncludePath>
   </PropertyGroup>
 
   <!-- Macros $(SolutionDir) not guaranteed to work in all scenarios -->
@@ -16,16 +16,28 @@
   </ItemGroup>
   <!-- Classes -->
   <ItemGroup>
-    <ClInclude Include="..\Sources\Fields\Classes\SimpleSquareTestField.h" />
+    <ClInclude Include="..\Sources\Fields\Classes\FieldsPredefines.h" />
     <ClInclude Include="..\Sources\Fields\Classes\FieldSquare.h" />
+    <ClInclude Include="..\Sources\Fields\Classes\SimpleSquareTestField.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Sources\Fields\Classes\SimpleSquareTestField.cpp" />
     <ClCompile Include="..\Sources\Fields\Classes\FieldSquare.cpp" />
+    <ClCompile Include="..\Sources\Fields\Classes\SimpleSquareTestField.cpp" />
   </ItemGroup>
   <!-- Interfaces -->
   <ItemGroup>
     <ClInclude Include="..\Sources\Fields\Interfaces\ICellAccess.h" />
+  </ItemGroup>
+  <!-- IO -->
+  <!-- Manager -->
+  <ItemGroup>
+    <ClInclude Include="..\Sources\Fields\Manager\FieldProperties.h" />
+    <ClInclude Include="..\Sources\Fields\Manager\FieldsManager.h" />
+    <ClInclude Include="..\Sources\Fields\Manager\FieldsRecalcer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\Fields\Manager\FieldsManager.cpp" />
+    <ClCompile Include="..\Sources\Fields\Manager\FieldsRecalcer.cpp" />
   </ItemGroup>
   <!-- Types -->
   <ItemGroup>

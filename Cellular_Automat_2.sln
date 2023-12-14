@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcxproj", "{337D625D-9E5D-4EBB-9D4D-C2EEAF59C920}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CellularAutomat", "CellularAutomat\CellularAutomat.vcxproj", "{388E2D78-C2E5-46C8-9587-2E65DBCAD354}"
+	ProjectSection(ProjectDependencies) = postProject
+		{24C421D7-90A7-4CBD-A1A1-52247EE9112C} = {24C421D7-90A7-4CBD-A1A1-52247EE9112C}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutomatCore", "AutomatCore\AutomatCore.vcxproj", "{24C421D7-90A7-4CBD-A1A1-52247EE9112C}"
 EndProject

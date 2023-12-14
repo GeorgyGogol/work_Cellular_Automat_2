@@ -34,6 +34,36 @@
     <ClInclude Include="..\Sources\Fields\Interfaces\ICellAccess.h">
       <Filter>Field\Interfaces</Filter>
     </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Manager\FieldsRecalcer.h">
+      <Filter>Field\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Manager\FieldProperties.h">
+      <Filter>Field\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Manager\FieldsManager.h">
+      <Filter>Field\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Automat\Automat.h">
+      <Filter>Automat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Cells\Structs\CellLevels.h">
+      <Filter>Cells\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Cells\Classes\SurfaceCell.h">
+      <Filter>Cells\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\General\Interfaces\IManagerIterator.h">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\General\Interfaces\IContainerManager.h">
+      <Filter>General</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Classes\FieldsPredefines.h">
+      <Filter>Field\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GraphicCell.h">
+      <Filter>Sources\Widgets</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\AutomatCore.cpp">
@@ -63,6 +93,24 @@
     <ClCompile Include="..\Sources\Fields\Types\Point.cpp">
       <Filter>Field\Types</Filter>
     </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Manager\FieldsManager.cpp">
+      <Filter>Field\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Fields\Manager\FieldsRecalcer.cpp">
+      <Filter>Field\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Automat\Automat.cpp">
+      <Filter>Automat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Cells\Structs\CellLevels.cpp">
+      <Filter>Cells\Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\Cells\Classes\SurfaceCell.cpp">
+      <Filter>Cells\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GraphicCell.cpp">
+      <Filter>Sources\Widgets</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Field">
@@ -82,6 +130,30 @@
     </Filter>
     <Filter Include="Field\Interfaces">
       <UniqueIdentifier>{ce1ef2f0-cf36-4383-bea9-8da2255bbcdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Field\IO">
+      <UniqueIdentifier>{bfdc91c3-4bf8-4e8e-9154-1f1880f4a72f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Field\Manager">
+      <UniqueIdentifier>{fd5b3b91-9fed-4660-a171-677907a42b77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Automat">
+      <UniqueIdentifier>{c9113dad-137b-440c-b3dd-8da7e2b217b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cells">
+      <UniqueIdentifier>{79505bca-7dad-41ce-8662-f60b3559af66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cells\Classes">
+      <UniqueIdentifier>{350d34ae-9ebb-4eca-bac0-32e587a019d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cells\Structs">
+      <UniqueIdentifier>{b3473bda-fefa-4b31-a779-bdbedf15c58d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="General">
+      <UniqueIdentifier>{3cc120c0-56fe-43eb-953d-f99f391706ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Widgets">
+      <UniqueIdentifier>{e5585a15-a403-4376-8288-8e1f60b8fc4e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
