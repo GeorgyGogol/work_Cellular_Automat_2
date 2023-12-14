@@ -25,10 +25,10 @@ DirectionsStatuses FieldSquare::getDirectionsForPoint(int x, int y) const
     return out;
 }
 
-SurfaceCell FieldSquare::getCellAt(int x, int y) const
+SurfaceCell* FieldSquare::getCellAt(int x, int y) const
 {
-    if (!isCoordValide(x, y)) return SurfaceCell();
-    return Cells[x + y * Width];
+    if (!isCoordValide(x, y)) return nullptr;
+    return &Cells[x + y * Width];
 }
 
 void FieldSquare::setCellAt(int x, int y, const SurfaceCell &cell)

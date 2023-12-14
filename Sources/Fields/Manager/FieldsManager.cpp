@@ -33,8 +33,16 @@ void FieldsManager::createField(const FieldProperties &properties)
     if (f) Fields.push_back(f);
 }
 
+AbstractField* FieldsManager::getLastField() const
+{
+    if (Fields.size() == 0) return nullptr;
+    return Fields[Fields.size() - 1];
+}
+
 void FieldsManager::recalcFields()
 {
+    if (Fields.size() == 0) return;
+    
     for (AbstractField* each : Fields)
     {
         Recalcer->recalcField(each);

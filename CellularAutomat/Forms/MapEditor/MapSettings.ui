@@ -86,11 +86,6 @@
        <string>Тестовая</string>
       </property>
      </item>
-     <item>
-      <property name="text">
-       <string>Квадратная</string>
-      </property>
-     </item>
     </widget>
    </item>
   </layout>

@@ -18,6 +18,11 @@ void Automat::createField(const FieldProperties &properties)
     Fields->createField(properties);
 }
 
+AbstractField *Automat::getField()
+{
+    return Fields->getLastField();
+}
+
 void Automat::doStep()
 {
 }

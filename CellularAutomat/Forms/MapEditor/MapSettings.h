@@ -16,7 +16,7 @@ public:
 
 private:
     Ui::MapSettingsClass *ui;
-    int MapTypeIndex = -1, 
+    int MapTypeIndex = 0, 
         Height = 0, 
         Width = 0;
     

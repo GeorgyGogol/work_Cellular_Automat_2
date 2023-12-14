@@ -3,6 +3,7 @@
 #include "automatcore_global.h"
 
 #include "FieldProperties.h"
+#include "AutomatFieldScene.h"
 
 class Automat;
 
@@ -14,9 +15,12 @@ public:
 
 private:
     Automat* pAutomat;
+    AutomatFieldScene* CurrentScene = nullptr;
 
 public:
-    void CreateField(const FieldProperties& settings);
+    AutomatFieldScene* createField(const FieldProperties& settings);
+    AutomatFieldScene* getCurrentScene() const;
+    void resetCurrentScene();
 
 };
 

@@ -14,6 +14,7 @@
   <ItemGroup>
     <ClCompile Include="..\Sources\Fields\Abstractions\AbstractField.cpp" />
   </ItemGroup>
+
   <!-- Classes -->
   <ItemGroup>
     <ClInclude Include="..\Sources\Fields\Classes\FieldsPredefines.h" />
@@ -24,11 +25,14 @@
     <ClCompile Include="..\Sources\Fields\Classes\FieldSquare.cpp" />
     <ClCompile Include="..\Sources\Fields\Classes\SimpleSquareTestField.cpp" />
   </ItemGroup>
+
   <!-- Interfaces -->
   <ItemGroup>
     <ClInclude Include="..\Sources\Fields\Interfaces\ICellAccess.h" />
   </ItemGroup>
+
   <!-- IO -->
+
   <!-- Manager -->
   <ItemGroup>
     <ClInclude Include="..\Sources\Fields\Manager\FieldProperties.h" />
@@ -39,6 +43,7 @@
     <ClCompile Include="..\Sources\Fields\Manager\FieldsManager.cpp" />
     <ClCompile Include="..\Sources\Fields\Manager\FieldsRecalcer.cpp" />
   </ItemGroup>
+  
   <!-- Types -->
   <ItemGroup>
     <ClInclude Include="..\Sources\Fields\Types\Point.h" />

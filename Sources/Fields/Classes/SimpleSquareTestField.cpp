@@ -13,9 +13,9 @@ SimpleSquareTestField::~SimpleSquareTestField()
     delete[] Cells;
 }
 
-int SimpleSquareTestField::CellAt(int x, int y) const
+int* SimpleSquareTestField::CellAt(int x, int y) const
 {
-    return Cells[x + y * Width];
+    return &Cells[x + y * Width];
 }
 
 int SimpleSquareTestField::getWidth(int onHeight) const
@@ -29,16 +29,16 @@ DirectionsStatuses SimpleSquareTestField::getDirectionsForPoint(int x, int y) co
     DirectionsStatuses out(getGeneralDirections());
 
     Point pos = Point(x - 1, y - 1);
-    int minAlt = CellAt(x, y) - 1;
-    int maxAlt = CellAt(x, y) + 1;
+    int minAlt = *CellAt(x, y) - 1;
+    int maxAlt = *CellAt(x, y) + 1;
     int cell;
 
-    cell = CellAt(pos.X, pos.Y);
+    cell = *CellAt(pos.X, pos.Y);
     out.setStatus(7, cell >= minAlt && cell <= maxAlt);
 
     pos.X++;
     for (int i = 0; i < 7; ++i) {
-        cell = CellAt(pos.X, pos.Y);
+        cell = *CellAt(pos.X, pos.Y);
         out.setStatus(i, cell >= minAlt && cell <= maxAlt);
 
         pos.X++;
@@ -56,9 +56,9 @@ DirectionsStatuses SimpleSquareTestField::getDirectionsForPoint(int x, int y) co
     return out;
 }
 
-int SimpleSquareTestField::getCellAt(int x, int y) const
+int* SimpleSquareTestField::getCellAt(int x, int y) const
 {
-    if (!isCoordValide(x, y)) return 0;
+    if (!isCoordValide(x, y)) return nullptr;
     return CellAt(x, y);
 }
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>685</width>
-    <height>471</height>
+    <width>647</width>
+    <height>388</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,6 +26,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_6">
        <item>
         <widget class="QGroupBox" name="groupBox_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="title">
           <string>Просмотр</string>
          </property>
@@ -59,6 +62,9 @@
        </item>
        <item>
         <widget class="QGroupBox" name="groupBox_4">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="title">
           <string>Масштаб</string>
          </property>
@@ -113,6 +119,9 @@
           </item>
           <item>
            <widget class="QCheckBox" name="checkBox_2">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>Значения</string>
             </property>
@@ -120,6 +129,9 @@
           </item>
           <item>
            <widget class="QCheckBox" name="checkBox_3">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>Направления</string>
             </property>
@@ -145,11 +157,17 @@
      </widget>
     </item>
     <item>
-     <widget class="QWidget" name="WidMap" native="true">
+     <widget class="QGraphicsView" name="mainView">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="minimumSize">
        <size>
-        <width>400</width>
-        <height>400</height>
+        <width>350</width>
+        <height>350</height>
        </size>
       </property>
      </widget>
@@ -165,6 +183,9 @@
       <layout class="QVBoxLayout" name="verticalLayout_9">
        <item>
         <widget class="QGroupBox" name="groupBox_7">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="title">
           <string>Редактирование</string>
          </property>
@@ -191,6 +212,9 @@
        </item>
        <item>
         <widget class="QGroupBox" name="groupBox_3">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="title">
           <string>Кисть</string>
          </property>
@@ -210,6 +234,9 @@
        </item>
        <item>
         <widget class="QGroupBox" name="groupBox_5">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="title">
           <string>Значение</string>
          </property>
@@ -236,12 +263,18 @@
        </item>
        <item>
         <widget class="QGroupBox" name="groupBox_6">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="title">
           <string>Вода</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_5">
           <item>
            <widget class="QCheckBox" name="checkBox_4">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>Подземная</string>
             </property>
@@ -273,8 +306,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>685</width>
-     <height>21</height>
+     <width>647</width>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -297,21 +330,15 @@
    <addaction name="menu"/>
    <addaction name="menu_2"/>
   </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="action">
    <property name="text">
     <string>Новая</string>
    </property>
   </action>
   <action name="action_LoadMap">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Загрузить</string>
    </property>
@@ -327,6 +354,9 @@
    </property>
   </action>
   <action name="action_SaveMap">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>Сохранить</string>
    </property>

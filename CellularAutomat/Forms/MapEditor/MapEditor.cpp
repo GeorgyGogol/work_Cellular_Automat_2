@@ -35,8 +35,8 @@ void MapEditor::on_action_CreateNewMap_triggered()
     FieldProperties newFieldSettings;
     newFieldSettings.Height = dialog->getMapHeight();
     newFieldSettings.Width = dialog->getMapWidth();
-    newFieldSettings.Type = dialog->getMapType();
+    newFieldSettings.Type = FieldProperties::FieldTypes(dialog->getMapType());
 
-    pDll->CreateField(newFieldSettings);
+    ui->mainView->setScene(pDll->createField(newFieldSettings));
 }
 

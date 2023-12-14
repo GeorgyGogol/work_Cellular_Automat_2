@@ -3,19 +3,36 @@
 #include "automatcore_global.h"
 #include <QGraphicsObject>
 
+//class QPainter;
+class SceneSettings;
+
 class AUTOMATCORE_EXPORT GraphicCell
     : public QGraphicsObject
 {
     Q_OBJECT
 
 public:
-    GraphicCell();
+    GraphicCell(SceneSettings* pSceneSettings);
+    ~GraphicCell();
 
 private:
-    QRectF boundingRect() const;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
+
+private:
+    virtual void paintBorder(QPainter *painter) = 0;
+    virtual void paintCell(QPainter *painter) = 0;
+
+protected:
+    QRectF boundingRect() const override;
+
+protected:
+    SceneSettings* Settings;
+
 
 public:
+    static QRectF getDefaultSize();
+
+public slots:
 
 };
 

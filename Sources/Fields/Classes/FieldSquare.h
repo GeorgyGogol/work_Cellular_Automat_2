@@ -23,7 +23,7 @@ public:
 
     DirectionsStatuses getDirectionsForPoint(int x, int y) const;
 
-    SurfaceCell getCellAt(int x, int y) const override;
+    SurfaceCell* getCellAt(int x, int y) const override;
 
     void setCellAt(int x, int y, const SurfaceCell& cell) override;
  

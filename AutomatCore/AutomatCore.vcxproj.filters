@@ -4,9 +4,6 @@
     <ClInclude Include="include\AutomatCore.h">
       <Filter>Sources</Filter>
     </ClInclude>
-    <ClInclude Include="automatcore_global.h">
-      <Filter>Sources</Filter>
-    </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>Sources</Filter>
     </ClInclude>
@@ -64,6 +61,18 @@
     <ClInclude Include="include\GraphicCell.h">
       <Filter>Sources\Widgets</Filter>
     </ClInclude>
+    <ClInclude Include="include\automatcore_global.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AutomatFieldScene.h">
+      <Filter>Sources\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="src\supportClasses\SceneSettings.h">
+      <Filter>Sources\SupportClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cells\TestGraphicCell.h">
+      <Filter>Sources\Widgets\Cells</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\AutomatCore.cpp">
@@ -111,6 +120,15 @@
     <ClCompile Include="src\GraphicCell.cpp">
       <Filter>Sources\Widgets</Filter>
     </ClCompile>
+    <ClCompile Include="src\AutomatFieldScene.cpp">
+      <Filter>Sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="src\supportClasses\SceneSettings.cpp">
+      <Filter>Sources\SupportClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cells\TestGraphicCell.cpp">
+      <Filter>Sources\Widgets\Cells</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Field">
@@ -154,6 +172,15 @@
     </Filter>
     <Filter Include="Sources\Widgets">
       <UniqueIdentifier>{e5585a15-a403-4376-8288-8e1f60b8fc4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{1fbe391c-821b-4f12-9565-afba053f8aa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\SupportClasses">
+      <UniqueIdentifier>{d3fbf625-1ab8-4bef-8e06-617d12749443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\Widgets\Cells">
+      <UniqueIdentifier>{eb4268c6-df1f-45f0-811b-edcf2dcc01ad}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

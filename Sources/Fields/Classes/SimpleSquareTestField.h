@@ -15,7 +15,7 @@ private:
     int Width;
     int* Cells;
 
-    int CellAt(int x, int y) const;
+    int* CellAt(int x, int y) const;
 
 public:
     int getFieldType() const override { return 0; }
@@ -24,7 +24,7 @@ public:
 
     DirectionsStatuses getDirectionsForPoint(int x, int y) const;
 
-    int getCellAt(int x, int y) const override;
+    int* getCellAt(int x, int y) const override;
 
     void setCellAt(int x, int y, const int& cell) override;
  

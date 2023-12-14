@@ -14,11 +14,13 @@ public:
 
 private:
     std::vector<AbstractField*> Fields;
-    AbstractField* CurrentField;
+    //AbstractField* CurrentField;
     FieldsRecalcer* Recalcer;
 
 public:
     void createField(const FieldProperties& properties);
+    //AbstractField* getCurrentField() const;
+    AbstractField* getLastField() const;
 
     void recalcFields();
 

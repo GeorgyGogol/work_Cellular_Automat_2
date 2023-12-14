@@ -3,6 +3,7 @@
 #include "FieldProperties.h"
 
 class FieldsManager;
+class AbstractField;
 
 class Automat
 {
@@ -15,6 +16,7 @@ private:
 
 public:
     void createField(const FieldProperties& properties);
+    AbstractField* getField();
 
     void doStep();
 

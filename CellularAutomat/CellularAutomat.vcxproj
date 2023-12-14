@@ -59,8 +59,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">
+    <ExternalIncludePath>$(SolutionDir)AutomatCore\include;$(SolutionDir)Sources\Fields\Manager;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
+    <ExternalIncludePath>$(SolutionDir)AutomatCore\include;$(SolutionDir)Sources\Fields\Manager;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
     <ClCompile>
@@ -120,6 +122,11 @@
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="Resources\MainResources.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutomatCore\AutomatCore.vcxproj">
+      <Project>{24c421d7-90a7-4cbd-a1a1-52247ee9112c}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
