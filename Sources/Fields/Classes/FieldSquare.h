@@ -4,7 +4,7 @@
 #include "ICellAccess.h"
 #include "SurfaceCell.h"
 
-class FieldSquare 
+class FieldSquare
     : public AbstractField
     , public ICellAccess<SurfaceCell>
 {
@@ -17,6 +17,8 @@ private:
     SurfaceCell* Cells;
 
 public:
+    int getFieldType() const override { return 1; }
+
     int getWidth(int onHeight = 0) const override;
 
     DirectionsStatuses getDirectionsForPoint(int x, int y) const;

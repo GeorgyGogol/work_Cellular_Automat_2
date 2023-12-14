@@ -18,6 +18,8 @@ private:
     int CellAt(int x, int y) const;
 
 public:
+    int getFieldType() const override { return 0; }
+
     int getWidth(int onHeight = 0) const override;
 
     DirectionsStatuses getDirectionsForPoint(int x, int y) const;

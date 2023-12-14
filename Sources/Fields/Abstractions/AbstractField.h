@@ -26,5 +26,7 @@ public:
 
     virtual DirectionsStatuses getDirectionsForPoint(int x, int y) const = 0;
 
+    virtual int getFieldType() const = 0;
+
 };
 
