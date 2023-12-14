@@ -2,18 +2,21 @@
 
 #include "automatcore_global.h"
 
-struct FieldSettings
-{
-    int Height;
-    int Width;
-};
+#include "FieldProperties.h"
+
+class Automat;
 
 class AUTOMATCORE_EXPORT AutomatCore
 {
 public:
     AutomatCore();
+    ~AutomatCore();
+
+private:
+    Automat* pAutomat;
 
 public:
-    void CreateField(const FieldSettings& settings);
+    void CreateField(const FieldProperties& settings);
 
 };
+

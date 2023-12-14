@@ -5,16 +5,20 @@
 #include <memory>
 #include "MapSettings.h"
 
+#include "AutomatCore.h"
+
 MapEditor::MapEditor(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MapEditorClass())
 {
     ui->setupUi(this);
+    pDll = new AutomatCore();
 }
 
 MapEditor::~MapEditor()
 {
     delete ui;
+    delete pDll;
 }
 
 void MapEditor::closeEvent(QCloseEvent* event)
@@ -28,4 +32,11 @@ void MapEditor::on_action_CreateNewMap_triggered()
     std::unique_ptr<MapSettings> dialog (new MapSettings(this));
     if (dialog->exec() == QDialog::Rejected) return;
 
+    FieldProperties newFieldSettings;
+    newFieldSettings.Height = dialog->getMapHeight();
+    newFieldSettings.Width = dialog->getMapWidth();
+    newFieldSettings.Type = dialog->getMapType();
+
+    pDll->CreateField(newFieldSettings);
 }
+

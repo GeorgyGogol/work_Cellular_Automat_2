@@ -16,5 +16,7 @@ private:
 public:
     void createField(const FieldProperties& properties);
 
+    void doStep();
+
 };
 

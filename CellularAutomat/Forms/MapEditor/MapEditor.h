@@ -6,6 +6,8 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MapEditorClass; };
 QT_END_NAMESPACE
 
+class AutomatCore;
+
 class MapEditor : public QMainWindow
 {
     Q_OBJECT
@@ -16,6 +18,7 @@ public:
 
 private:
     Ui::MapEditorClass *ui;
+    AutomatCore* pDll;
 
 protected:
     void closeEvent(QCloseEvent* event) override;
