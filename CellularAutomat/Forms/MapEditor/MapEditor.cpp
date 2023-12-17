@@ -32,11 +32,13 @@ void MapEditor::on_action_CreateNewMap_triggered()
     std::unique_ptr<MapSettings> dialog (new MapSettings(this));
     if (dialog->exec() == QDialog::Rejected) return;
 
-    FieldProperties newFieldSettings;
+    FieldInformation newFieldSettings;
     newFieldSettings.Height = dialog->getMapHeight();
     newFieldSettings.Width = dialog->getMapWidth();
-    newFieldSettings.Type = FieldProperties::FieldTypes(dialog->getMapType());
+    newFieldSettings.Type = dialog->getMapType();
 
-    ui->mainView->setScene(pDll->createField(newFieldSettings));
+    pDll->createField(newFieldSettings);
+    ui->mainView->setScene(pDll->getFieldScenePtr());
+    pDll->setupFieldInScene(newFieldSettings);
 }
 

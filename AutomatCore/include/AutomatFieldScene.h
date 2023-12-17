@@ -2,10 +2,9 @@
 
 #include "automatcore_global.h"
 #include <QGraphicsScene>
+#include "CoreProperties.h"
 
 class SceneSettings;
-class AbstractField;
-class SimpleSquareTestField;
 
 class AUTOMATCORE_EXPORT AutomatFieldScene
     : public QGraphicsScene
@@ -13,19 +12,18 @@ class AUTOMATCORE_EXPORT AutomatFieldScene
     Q_OBJECT
 
 public:
-    AutomatFieldScene(QObject* parent = nullptr);
+    explicit AutomatFieldScene(QObject* parent = nullptr);
     ~AutomatFieldScene();
 
 private:
     SceneSettings* Settings;
-    QRectF DefaultCellSize;
 
-    void createTestField(SimpleSquareTestField* pField);
+    void createTestField();
 
 protected:
 
 public:
-    void LinkWithField(AbstractField* pField);
+    void LinkWithField(automat::AbstractField* pField);
     void ClearLinkedField();
 
 public slots:

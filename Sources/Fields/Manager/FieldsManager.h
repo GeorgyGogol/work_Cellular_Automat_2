@@ -2,27 +2,29 @@
 
 #include <vector>
 #include "FieldProperties.h"
-#include "FieldsPredefines.h"
 
-class FieldsRecalcer;
+namespace automat {
 
-class FieldsManager
-{
-public:
-    FieldsManager();
-    ~FieldsManager();
+    class FieldsRecalcer;
+    class AbstractField;
 
-private:
-    std::vector<AbstractField*> Fields;
-    //AbstractField* CurrentField;
-    FieldsRecalcer* Recalcer;
+    class FieldsManager
+    {
+    public:
+        FieldsManager();
+        ~FieldsManager();
 
-public:
-    void createField(const FieldProperties& properties);
-    //AbstractField* getCurrentField() const;
-    AbstractField* getLastField() const;
+    private:
+        std::vector<AbstractField*> Fields;
+        FieldsRecalcer* Recalcer;
 
-    void recalcFields();
+    public:
+        void createField(const FieldProperties& properties);
+        AbstractField* getLastField() const;
 
-};
+        void recalcFields();
+
+    };
+
+}
 

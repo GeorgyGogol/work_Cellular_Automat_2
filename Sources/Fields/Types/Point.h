@@ -2,37 +2,41 @@
 
 #include <string>
 
-class Point
-{
-public:
-    Point();
-    Point(int x, int y);
+namespace automat {
 
-    ~Point() = default;
-    
-    Point(const Point&);
-    Point& operator=(const Point& src);
+    class Point
+    {
+    public:
+        Point();
+        Point(int x, int y);
 
-public:
-    bool operator==(const Point& val) const;
-    bool operator!=(const Point& val) const;
-    Point operator+(const Point& val) const;
-    Point operator-(const Point& val) const;
-    Point& operator+=(const Point& src);
-    Point& operator-=(const Point& src);
-    Point& operator--();
-    Point operator--(int);
-    Point& operator++();
-    Point operator++(int);
+        ~Point() = default;
+        
+        Point(const Point&);
+        Point& operator=(const Point& src);
 
-public:
-    int X, Y;
+    public:
+        bool operator==(const Point& val) const;
+        bool operator!=(const Point& val) const;
+        Point operator+(const Point& val) const;
+        Point operator-(const Point& val) const;
+        Point& operator+=(const Point& src);
+        Point& operator-=(const Point& src);
+        Point& operator--();
+        Point operator--(int);
+        Point& operator++();
+        Point operator++(int);
 
-    std::string s_str() const;
-    //const char* c_str() const;
+    public:
+        int X, Y;
 
-    Point GetVectorTo(const Point& aim) const;
-    double GetRangeTo(const Point& aim) const;
-    
-};
+        std::string s_str() const;
+        //const char* c_str() const;
+
+        Point GetVectorTo(const Point& aim) const;
+        double GetRangeTo(const Point& aim) const;
+        
+    };
+
+}
 

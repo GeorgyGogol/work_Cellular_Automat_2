@@ -2,23 +2,27 @@
 
 #include "FieldProperties.h"
 
-class FieldsManager;
-class AbstractField;
+namespace automat {
 
-class Automat
-{
-public:
-    Automat();
-    ~Automat();
+    class FieldsManager;
+    class AbstractField;
 
-private:
-    FieldsManager* Fields;
+    class Automat
+    {
+    public:
+        Automat();
+        ~Automat();
 
-public:
-    void createField(const FieldProperties& properties);
-    AbstractField* getField();
+    private:
+        FieldsManager* Fields = nullptr;
 
-    void doStep();
+    public:
+        void createField(const FieldProperties& properties);
+        AbstractField* getLastCreatedField() const;
 
-};
+        void doStep();
+
+    };
+
+}
 

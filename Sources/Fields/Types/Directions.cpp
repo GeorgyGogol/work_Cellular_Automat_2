@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Directions.h"
 
+using namespace automat;
+
 Directions::Directions(int nDirs)
     : NDirections(nDirs)
 {

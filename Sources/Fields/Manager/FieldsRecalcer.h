@@ -1,18 +1,24 @@
 #pragma once
 
-class AbstractField;
-#include "FieldsPredefines.h"
+namespace automat {
 
-class FieldsRecalcer
-{
-public:
-    FieldsRecalcer() = default;
+    class AbstractField;
+    class SimpleSquareTestField;
 
-private:
-    void recalc(SimpleSquareTestField* pField);
+    class FieldsRecalcer
+    {
+    public:
+        FieldsRecalcer() = default;
 
-public:
-    void recalcField(AbstractField* pField);
+    private:
+        void recalc(SimpleSquareTestField* pField);
 
-};
+    public:
+        void recalcField(AbstractField* pField);
+
+    };
+
+}
+
+
 

@@ -10,7 +10,7 @@
     <ClInclude Include="include\automatcore_global.h" />
     <ClInclude Include="include\AutomatCore.h" />
     <QtMoc Include="include\AutomatFieldScene.h" />
-    <ClInclude Include="include\CoreFieldProperties.h" />
+    <ClInclude Include="include\CoreProperties.h" />
     <QtMoc Include="include\GraphicCell.h" />
   </ItemGroup>
   <!-- include src -->
@@ -28,9 +28,13 @@
   </ItemGroup>
   <!-- Support classes -->
   <ItemGroup>
+    <ClInclude Include="src\supportClasses\CellsSettings.h" />
+    <ClInclude Include="src\supportClasses\ColorLimits.h" />
     <ClInclude Include="src\supportClasses\SceneSettings.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\supportClasses\CellsSettings.cpp" />
+    <ClCompile Include="src\supportClasses\ColorLimits.cpp" />
     <ClCompile Include="src\supportClasses\SceneSettings.cpp" />
   </ItemGroup>
 </Project>

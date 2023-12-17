@@ -58,20 +58,20 @@
     <ClInclude Include="..\Sources\Fields\Classes\FieldsPredefines.h">
       <Filter>Field\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="include\GraphicCell.h">
-      <Filter>Sources\Widgets</Filter>
-    </ClInclude>
     <ClInclude Include="include\automatcore_global.h">
       <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="include\AutomatFieldScene.h">
-      <Filter>Sources\Widgets</Filter>
     </ClInclude>
     <ClInclude Include="src\supportClasses\SceneSettings.h">
       <Filter>Sources\SupportClasses</Filter>
     </ClInclude>
-    <ClInclude Include="src\cells\TestGraphicCell.h">
-      <Filter>Sources\Widgets\Cells</Filter>
+    <ClInclude Include="src\supportClasses\CellsSettings.h">
+      <Filter>Sources\SupportClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="src\supportClasses\ColorLimits.h">
+      <Filter>Sources\SupportClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CoreProperties.h">
+      <Filter>Sources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +129,12 @@
     <ClCompile Include="src\cells\TestGraphicCell.cpp">
       <Filter>Sources\Widgets\Cells</Filter>
     </ClCompile>
+    <ClCompile Include="src\supportClasses\CellsSettings.cpp">
+      <Filter>Sources\SupportClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="src\supportClasses\ColorLimits.cpp">
+      <Filter>Sources\SupportClasses</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Field">
@@ -182,5 +188,10 @@
     <Filter Include="Sources\Widgets\Cells">
       <UniqueIdentifier>{eb4268c6-df1f-45f0-811b-edcf2dcc01ad}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="include\AutomatFieldScene.h" />
+    <QtMoc Include="include\GraphicCell.h" />
+    <QtMoc Include="src\cells\TestGraphicCell.h" />
   </ItemGroup>
 </Project>

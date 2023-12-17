@@ -2,36 +2,40 @@
 
 #include "Directions.h"
 
-class DirectionsStatuses
-    : public Directions
-{
-public:
-    DirectionsStatuses(int nDirs);
-    
-    DirectionsStatuses(const DirectionsStatuses& src) noexcept;
-    DirectionsStatuses(DirectionsStatuses&& from) noexcept;
+namespace automat {
 
-    virtual ~DirectionsStatuses();
+    class DirectionsStatuses
+        : public Directions
+    {
+    public:
+        DirectionsStatuses(int nDirs);
+        
+        DirectionsStatuses(const DirectionsStatuses& src) noexcept;
+        DirectionsStatuses(DirectionsStatuses&& from) noexcept;
 
-    static DirectionsStatuses CreateInvalide();
+        virtual ~DirectionsStatuses();
 
-public:
-    DirectionsStatuses& operator=(const DirectionsStatuses& src) noexcept;
-    DirectionsStatuses& operator=(DirectionsStatuses&& from) noexcept;
-    
+        static DirectionsStatuses CreateInvalide();
 
-private:
-    bool* DirectionsStats = nullptr;
+    public:
+        DirectionsStatuses& operator=(const DirectionsStatuses& src) noexcept;
+        DirectionsStatuses& operator=(DirectionsStatuses&& from) noexcept;
+        
 
-public:
-    bool getStatus(int direction) const;
-    void setStatus(int direction, bool status);
+    private:
+        bool* DirectionsStats = nullptr;
 
-    Direction getDirection(int rawDirection) const override;
+    public:
+        bool getStatus(int direction) const;
+        void setStatus(int direction, bool status);
 
-    void resetStatuses(bool resetValue = true);
+        Direction getDirection(int rawDirection) const override;
 
-    bool isValide() const;
+        void resetStatuses(bool resetValue = true);
 
-};
+        bool isValide() const;
+
+    };
+
+}
 

@@ -2,33 +2,37 @@
 
 #include "CellLevels.h"
 
-class SurfaceCell
-{
-public:
-    SurfaceCell();
-    SurfaceCell(const CellLevels& levels);
-    
-    ~SurfaceCell() = default;
+namespace automat {
 
-    //SurfaceCell(const SurfaceCell& src);
-    //void operator=(const SurfaceCell& src);
+    class SurfaceCell
+    {
+    public:
+        SurfaceCell();
+        SurfaceCell(const CellLevels& levels);
+        
+        ~SurfaceCell() = default;
 
-    operator CellLevels() const;
+        //SurfaceCell(const SurfaceCell& src);
+        //void operator=(const SurfaceCell& src);
 
-private:
-    CellLevels Level;
+        operator CellLevels() const;
 
-public:
-    int getAltitude() const;
-    void changeAltitude(int delta);
-    void setAltitude(int value);
+    private:
+        CellLevels Level;
 
-    int getLiquidCount() const;
-    void changeLiquidCount(int delta);
-    void setLiquidCount(int value);
-    void setLiquidCount(int value, bool isUnderground);
+    public:
+        int getAltitude() const;
+        void changeAltitude(int delta);
+        void setAltitude(int value);
 
-    //int getSurfaceLevel() const;
+        int getLiquidCount() const;
+        void changeLiquidCount(int delta);
+        void setLiquidCount(int value);
+        void setLiquidCount(int value, bool isUnderground);
 
-};
+        //int getSurfaceLevel() const;
+
+    };
+
+}
 

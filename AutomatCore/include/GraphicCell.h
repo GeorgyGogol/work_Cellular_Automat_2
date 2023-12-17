@@ -3,7 +3,6 @@
 #include "automatcore_global.h"
 #include <QGraphicsObject>
 
-//class QPainter;
 class SceneSettings;
 
 class AUTOMATCORE_EXPORT GraphicCell
@@ -12,7 +11,7 @@ class AUTOMATCORE_EXPORT GraphicCell
     Q_OBJECT
 
 public:
-    GraphicCell(SceneSettings* pSceneSettings);
+    explicit GraphicCell(SceneSettings* pSceneSettings);
     ~GraphicCell();
 
 private:
@@ -28,9 +27,8 @@ protected:
 protected:
     SceneSettings* Settings;
 
-
 public:
-    static QRectF getDefaultSize();
+
 
 public slots:
 

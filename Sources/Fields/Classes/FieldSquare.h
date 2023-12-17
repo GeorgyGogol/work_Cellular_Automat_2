@@ -4,34 +4,39 @@
 #include "ICellAccess.h"
 #include "SurfaceCell.h"
 
-class FieldSquare
-    : public AbstractField
-    , public ICellAccess<SurfaceCell>
-{
-public:
-    FieldSquare(int height, int width);
-    virtual ~FieldSquare();
+namespace automat {
 
-private:
-    int Width;
-    SurfaceCell* Cells;
+    class FieldSquare
+        : public AbstractField
+        , public ICellAccess<SurfaceCell>
+    {
+    public:
+        FieldSquare(int height, int width);
+        virtual ~FieldSquare();
 
-public:
-    int getFieldType() const override { return 1; }
+    private:
+        int Width;
+        SurfaceCell* Cells;
 
-    int getWidth(int onHeight = 0) const override;
+    public:
+        int getFieldType() const override { return 1; }
 
-    DirectionsStatuses getDirectionsForPoint(int x, int y) const;
+        int getWidth(int onHeight = 0) const override;
 
-    SurfaceCell* getCellAt(int x, int y) const override;
+        DirectionsStatuses getDirectionsForPoint(int x, int y) const;
 
-    void setCellAt(int x, int y, const SurfaceCell& cell) override;
- 
+        SurfaceCell* getCellAt(int x, int y) const override;
 
-    //bool isCanMove(int x, int y, Direction dir) const;
-    //bool isCanMove(Point p, Direction dir) const { return isCanMove(p.X, p.Y, dir); }
+        void setCellAt(int x, int y, const SurfaceCell& cell) override;
+    
 
-    //Direction getDirectionFromVector(Point vector) const;
-    //Point getVectorFromDirection(Direction direction) const;
+        //bool isCanMove(int x, int y, Direction dir) const;
+        //bool isCanMove(Point p, Direction dir) const { return isCanMove(p.X, p.Y, dir); }
 
-};
+        //Direction getDirectionFromVector(Point vector) const;
+        //Point getVectorFromDirection(Direction direction) const;
+
+    };
+    
+}
+

@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "FieldSquare.h"
 
+using namespace automat;
+
 FieldSquare::FieldSquare(int height, int width)
     : AbstractField(height, 8)
     , Width(width)

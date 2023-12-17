@@ -1,30 +1,34 @@
 #pragma once
 
-class Direction
-{
-public:
-    Direction() = default;
-    Direction(int rawDirection, bool accessable = true);
+namespace automat {
 
-    ~Direction() = default;
+    class Direction
+    {
+    public:
+        Direction() = default;
+        Direction(int rawDirection, bool accessable = true);
 
-    Direction(const Direction& src);
-    Direction& operator=(const Direction& src);
+        ~Direction() = default;
 
-public:
-    operator int();
-    operator bool();
+        Direction(const Direction& src);
+        Direction& operator=(const Direction& src);
 
-public:
-    bool operator==(const Direction& rightVal) const;
-    bool operator!=(const Direction& rightVal) const;
+    public:
+        operator int();
+        operator bool();
 
-public:
-    int Azimuth = 0;
-    bool Access = true;
+    public:
+        bool operator==(const Direction& rightVal) const;
+        bool operator!=(const Direction& rightVal) const;
 
-public:
+    public:
+        int Azimuth = 0;
+        bool Access = true;
 
-    
-};
+    public:
+
+        
+    };
+
+}
 

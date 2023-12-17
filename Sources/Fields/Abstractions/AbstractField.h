@@ -4,29 +4,33 @@
 #include "DirectionsStatuses.h"
 #include "Point.h"
 
-class AbstractField
-{
-public:
-    AbstractField(int height, int rawDirsCount);
-    virtual ~AbstractField();
+namespace automat {
 
-private:
-    Directions AvalableDirections;
+    class AbstractField
+    {
+    public:
+        AbstractField(int height, int rawDirsCount);
+        virtual ~AbstractField();
 
-protected:
-    int Height;
+    private:
+        Directions AvalableDirections;
 
-public:
-    int getHeight() const;
-    virtual int getWidth(int onHeight = 0) const = 0;
-    Directions getGeneralDirections() const;
+    protected:
+        int Height;
 
-    virtual bool isCoordValide(int x, int y) const;
-    inline bool isCoordValide(Point p) const { return isCoordValide(p.X, p.Y); }
+    public:
+        int getHeight() const;
+        virtual int getWidth(int onHeight = 0) const = 0;
+        Directions getGeneralDirections() const;
 
-    virtual DirectionsStatuses getDirectionsForPoint(int x, int y) const = 0;
+        virtual bool isCoordValide(int x, int y) const;
+        inline bool isCoordValide(Point p) const { return isCoordValide(p.X, p.Y); }
 
-    virtual int getFieldType() const = 0;
+        virtual DirectionsStatuses getDirectionsForPoint(int x, int y) const = 0;
 
-};
+        virtual int getFieldType() const = 0;
+
+    };
+
+}
 

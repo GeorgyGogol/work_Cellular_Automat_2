@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "AbstractField.h"
 
+using namespace automat;
+
 AbstractField::AbstractField(int height, int rawDirsCount)
     : Height(height)
     , AvalableDirections(rawDirsCount)

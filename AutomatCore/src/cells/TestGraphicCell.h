@@ -1,7 +1,6 @@
 #pragma once
 
 #include "GraphicCell.h"
-#include "QObject.h"
 
 class TestGraphicCell : public GraphicCell
 {
@@ -9,9 +8,11 @@ class TestGraphicCell : public GraphicCell
 
 public:
     TestGraphicCell(int* pCell, SceneSettings* pSceneSettings);
+    ~TestGraphicCell();
 
 private:
     int* CellDataSource;
+    int LastColor = -1;
 
     void paintBorder(QPainter *painter) override;
     void paintCell(QPainter *painter) override;

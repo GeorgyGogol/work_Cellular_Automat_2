@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Direction.h"
 
+using namespace automat;
+
 Direction::Direction(int rawDirection, bool accessable)
     : Azimuth(rawDirection)
     , Access(accessable)

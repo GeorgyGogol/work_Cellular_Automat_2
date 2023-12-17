@@ -2,27 +2,33 @@
 
 #include "Direction.h"
 
-class Directions
-{
-public:
-    Directions(int nDirs);
-    Directions(Direction maxDirection);
+namespace automat {
 
-    virtual ~Directions() = default;
+    class Directions
+    {
+    public:
+        Directions(int nDirs);
+        Directions(Direction maxDirection);
 
-    operator int();
+        virtual ~Directions() = default;
 
-private:
-    unsigned short int NDirections;
+        operator int();
 
-protected:
+    private:
+        unsigned short int NDirections;
 
-public:
-    int getRawDirections() const;
-    bool isDirectValide(int direction) const;
-    void normalize(int& rawDirection) const;
-    
-    virtual Direction getDirection(int rawDirection) const;
+    protected:
 
-};
+    public:
+        int getRawDirections() const;
+        bool isDirectValide(int direction) const;
+        void normalize(int& rawDirection) const;
+        
+        virtual Direction getDirection(int rawDirection) const;
+
+    };
+
+}
+
+
 

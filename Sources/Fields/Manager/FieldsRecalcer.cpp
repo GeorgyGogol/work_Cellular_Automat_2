@@ -4,6 +4,8 @@
 #include "AbstractField.h"
 #include "SimpleSquareTestField.h"
 
+using namespace automat;
+
 void FieldsRecalcer::recalc(SimpleSquareTestField *pField)
 {
 

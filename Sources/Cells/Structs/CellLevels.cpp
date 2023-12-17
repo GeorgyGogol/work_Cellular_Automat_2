@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CellLevels.h"
 
-int SurfaceLevel(const CellLevels &info)
+int automat::SurfaceLevel(const CellLevels &info)
 {
     if (info.isLiquidUnderground){
         int max = info.Altitude;

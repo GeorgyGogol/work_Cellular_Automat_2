@@ -16,12 +16,7 @@ GraphicCell::~GraphicCell()
 
 QRectF GraphicCell::boundingRect() const
 {
-    return getDefaultSize();
-}
-
-QRectF GraphicCell::getDefaultSize()
-{
-    return QRectF(0, 0, 50, 50);
+    return Settings->getCellSize();
 }
 
 void GraphicCell::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
@@ -29,15 +24,10 @@ void GraphicCell::paint(QPainter *painter, const QStyleOptionGraphicsItem *optio
     Q_UNUSED(option);
     Q_UNUSED(widget);
 
+    paintCell(painter);
+
     if (Settings->PrintBorder) {
         paintBorder(painter);
     }
-
-    paintCell(painter);
 }
-
-/* void GraphicCell::setNeedPaintBorder(bool isNeed)
-{
-    PrintBorder = isNeed; 
-} */
 

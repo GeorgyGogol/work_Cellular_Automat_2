@@ -7,6 +7,8 @@
 #include "SimpleSquareTestField.h"
 #include "FieldSquare.h"
 
+using namespace automat;
+
 FieldsManager::FieldsManager()
 {
     Recalcer = new FieldsRecalcer();

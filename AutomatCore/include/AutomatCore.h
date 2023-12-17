@@ -2,10 +2,8 @@
 
 #include "automatcore_global.h"
 
-#include "FieldProperties.h"
+#include "CoreProperties.h"
 #include "AutomatFieldScene.h"
-
-class Automat;
 
 class AUTOMATCORE_EXPORT AutomatCore
 {
@@ -14,13 +12,16 @@ public:
     ~AutomatCore();
 
 private:
-    Automat* pAutomat;
-    AutomatFieldScene* CurrentScene = nullptr;
+    automat::Automat* pAutomat;
+    AutomatFieldScene* FieldScene = nullptr;
 
 public:
-    AutomatFieldScene* createField(const FieldProperties& settings);
-    AutomatFieldScene* getCurrentScene() const;
-    void resetCurrentScene();
+    AutomatFieldScene* getFieldScenePtr();
+
+    void createField(FieldInformation& settings);
+    FieldList getFieldList();
+    void setupFieldInScene(const FieldInformation& field);
+    inline void resetCurrentScene() { setupFieldInScene(FieldInformation()); }
 
 };
 

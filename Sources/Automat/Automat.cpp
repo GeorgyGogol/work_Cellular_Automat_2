@@ -3,6 +3,8 @@
 
 #include "FieldsManager.h"
 
+using namespace automat;
+
 Automat::Automat()
 {
     Fields = new FieldsManager();
@@ -18,7 +20,7 @@ void Automat::createField(const FieldProperties &properties)
     Fields->createField(properties);
 }
 
-AbstractField *Automat::getField()
+AbstractField *Automat::getLastCreatedField() const
 {
     return Fields->getLastField();
 }

@@ -5,29 +5,48 @@
 
 AutomatCore::AutomatCore()
 {
-    pAutomat = new Automat();
-    CurrentScene = new AutomatFieldScene();
+    pAutomat = new automat::Automat();
 }
 
 AutomatCore::~AutomatCore()
 {
-    delete CurrentScene;
+    if (FieldScene) delete FieldScene;
     delete pAutomat;
 }
 
-AutomatFieldScene* AutomatCore::createField(const FieldProperties& settings)
+AutomatFieldScene* AutomatCore::getFieldScenePtr()
 {
-    pAutomat->createField(settings);
-    CurrentScene->LinkWithField(pAutomat->getField());
-    return CurrentScene;
+    if(!FieldScene) {
+        FieldScene = new AutomatFieldScene();
+    }
+    return FieldScene;
 }
 
-AutomatFieldScene *AutomatCore::getCurrentScene() const
+void AutomatCore::createField(FieldInformation& settings)
 {
-    return CurrentScene;
+    automat::FieldProperties newFieldSet;
+    newFieldSet.Height = settings.Height;
+    newFieldSet.Width = settings.Width;
+    newFieldSet.Type = automat::FieldProperties::FieldTypes(settings.Type);
+
+    pAutomat->createField(newFieldSet);
+
+    settings.ID = 1000;
 }
 
-void AutomatCore::resetCurrentScene()
+FieldList AutomatCore::getFieldList()
 {
-    //CurrentScene = nullptr;
+    return FieldList();
 }
+
+void AutomatCore::setupFieldInScene(const FieldInformation& field)
+{
+    if (field.ID > 0){
+        //getFieldScenePtr()->LinkWithField(pAutomat->getField(field.ID));
+        getFieldScenePtr()->LinkWithField(pAutomat->getLastCreatedField());
+    }
+    else {
+        getFieldScenePtr()->ClearLinkedField();
+    }
+}
+

@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "SurfaceCell.h"
 
+using namespace automat;
+
 SurfaceCell::SurfaceCell()
 {
     Level.Altitude = 0;

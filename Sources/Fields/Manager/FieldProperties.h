@@ -1,14 +1,18 @@
 #pragma once
 
-struct FieldProperties
-{
-    int Height;
-    int Width;
+namespace automat {
 
-    enum FieldTypes
+    struct FieldProperties
     {
-        TestField = 0,
-        Default = TestField
-    } Type = FieldTypes::Default;
-};
+        int Height;
+        int Width;
+
+        enum FieldTypes
+        {
+            TestField = 0,
+            Default = TestField
+        } Type = FieldTypes::Default;
+    };
+
+}
 

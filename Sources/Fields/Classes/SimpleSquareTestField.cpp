@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "SimpleSquareTestField.h"
 
+using namespace automat;
+
 SimpleSquareTestField::SimpleSquareTestField(int height, int width)
     : AbstractField(height, 8)
     , Width(width)
