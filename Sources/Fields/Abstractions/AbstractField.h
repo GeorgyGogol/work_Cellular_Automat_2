@@ -1,9 +1,18 @@
 #pragma once
 
+/// @file AbstractField.h
+/// @brief Файл абстракции поля
+/// @details В этом файле описывается базовый класс поля
+
 #include "Directions.h"
 #include "DirectionsStatuses.h"
 #include "Point.h"
 
+/**
+ * @brief Абстракция поля
+ * 
+ * @details
+*/
 namespace automat {
 
     class AbstractField
