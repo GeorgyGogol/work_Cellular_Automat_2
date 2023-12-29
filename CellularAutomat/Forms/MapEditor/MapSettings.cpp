@@ -42,6 +42,11 @@ void MapSettings::MapTypeChange(int type)
     RecalcMapSize();
 }
 
+QString MapSettings::getMapName() const
+{
+    return ui->eFieldName->text();
+}
+
 void MapSettings::MapHeightChange(int h)
 {
     Height = h;

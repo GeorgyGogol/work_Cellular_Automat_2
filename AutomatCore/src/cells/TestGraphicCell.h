@@ -17,6 +17,9 @@ private:
     void paintBorder(QPainter *painter) override;
     void paintCell(QPainter *painter) override;
     void paintInformation(QPainter* painter) override;
+    void paintDirections(QPainter* painter) override;
+
+    void paintBorderSelected(QPainter* painter, bool isSelected) override;
 
 };
 

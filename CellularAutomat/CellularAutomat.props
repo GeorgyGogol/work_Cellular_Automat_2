@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
 
   <PropertyGroup>
-    <IncludePath>$(IncludePath);$(SolutionDir)\CellularAutomat;$(SolutionDir)\CellularAutomat\Classes;$(SolutionDir)\CellularAutomat\Forms\MapEditor;$(SolutionDir)\CellularAutomat\Forms\ObjectsEditor;$(SolutionDir)\CellularAutomat\Forms\StartMenu;</IncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)\CellularAutomat;$(SolutionDir)\CellularAutomat\Classes;$(SolutionDir)\CellularAutomat\Forms\MapEditor;$(SolutionDir)\CellularAutomat\Forms\ObjectsEditor;$(SolutionDir)\CellularAutomat\Forms\StartMenu;$(SolutionDir)\CellularAutomat\Widgets;</IncludePath>
   </PropertyGroup>
 
   <!-- Forms -->

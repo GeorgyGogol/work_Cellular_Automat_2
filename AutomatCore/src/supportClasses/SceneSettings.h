@@ -18,6 +18,7 @@ private:
 public:
     bool PrintBorder = false;
     bool PrintCellInfo = false;
+    bool PrintDirections = false;
 
     QRectF getCellSize() const;
     inline int getCellPosX(int x) const { return x * DefaultCellSize.width(); }

@@ -3,11 +3,11 @@
 
 using namespace automat;
 
-SimpleSquareTestField::SimpleSquareTestField(int height, int width)
-    : AbstractField(height, 8)
-    , Width(width)
+SimpleSquareTestField::SimpleSquareTestField(const FieldProperties& props)
+    : AbstractField(props, 8)
+    , Width(props.Width)
 {
-    Cells = new int[Height * Width] {0} ;
+    Cells = new int[Height * Width] {0};
 }
 
 SimpleSquareTestField::~SimpleSquareTestField()

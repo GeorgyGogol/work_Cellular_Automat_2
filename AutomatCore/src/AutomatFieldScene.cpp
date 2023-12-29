@@ -81,7 +81,7 @@ void AutomatFieldScene::setNeedPaintGrid(bool isNeed)
 
 void AutomatFieldScene::setNeedPaintDirections(bool isNeed)
 {
-    //Settings->PrintDirections = isNeed;
+    Settings->PrintDirections = isNeed;
     update();
 }
 

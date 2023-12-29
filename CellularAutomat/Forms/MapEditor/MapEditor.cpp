@@ -17,6 +17,8 @@ MapEditor::MapEditor(QWidget *parent)
     pDll = new AutomatCore();
 
     connect(ui->spinBox_Scale, qOverload<int>(&QSpinBox::valueChanged), this, &MapEditor::setMainViewScale);
+
+    ui->MapListView->setModel(pDll->getMapListModel());
 }
 
 MapEditor::~MapEditor()
@@ -27,7 +29,8 @@ MapEditor::~MapEditor()
 
 void MapEditor::setStatusWithMap(bool isHaveMap)
 {
-    ui->action_CreateNewMap->setDisabled(isHaveMap);
+    isHaveMap = pDll->getFieldList().size() > 0;
+    //ui->action_CreateNewMap->setDisabled(isHaveMap);
     ui->action_LoadMap->setDisabled(isHaveMap);
     ui->action_SaveMap->setEnabled(isHaveMap);
     ui->action_CloseMap->setEnabled(isHaveMap);
@@ -48,12 +51,19 @@ void MapEditor::on_action_CreateNewMap_triggered()
     newFieldSettings.Height = dialog->getMapHeight();
     newFieldSettings.Width = dialog->getMapWidth();
     newFieldSettings.Type = dialog->getMapType();
+    newFieldSettings.Name = dialog->getMapName();
 
-    pDll->createField(newFieldSettings);
-    ui->mainView->setScene(pDll->getFieldScenePtr());
-    pDll->setupFieldInScene(newFieldSettings);
+    int mapID = pDll->createField(newFieldSettings);
+    if (mapID > -1) {
+        ui->mainView->setScene(pDll->getFieldScenePtr());
+        pDll->setupFieldInScene(mapID);
 
-    setStatusWithMap(true);
+        setStatusWithMap(true);
+        ui->statusBar->setMapSize(newFieldSettings.Height, newFieldSettings.Width);
+        ui->statusBar->setMapName(newFieldSettings.Name);
+        ui->statusBar->setMapType("Test map");
+        //ui->MapListView->setS
+    }
 }
 
 void MapEditor::on_action_LoadMap_triggered()
@@ -71,7 +81,7 @@ void MapEditor::on_action_CloseMap_triggered()
         QMessageBox::warning(
             this,
             "Внимание!",
-            "Вы уверены, что хотите закрыть карту?",
+            "Вы уверены, что хотите закрыть и удалить карту?",
             QMessageBox::Ok | QMessageBox::Cancel,
             QMessageBox::Ok
         ) == QMessageBox::Cancel
@@ -81,6 +91,7 @@ void MapEditor::on_action_CloseMap_triggered()
     }
 
     pDll->resetCurrentScene();
+    //pDll->deleteField();
 
 
     setStatusWithMap(false);

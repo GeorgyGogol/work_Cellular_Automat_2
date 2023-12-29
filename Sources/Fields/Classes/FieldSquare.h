@@ -11,7 +11,7 @@ namespace automat {
         , public ICellAccess<SurfaceCell>
     {
     public:
-        FieldSquare(int height, int width);
+        FieldSquare(const FieldProperties& props);
         virtual ~FieldSquare();
 
     private:

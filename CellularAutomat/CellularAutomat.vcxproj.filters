@@ -30,6 +30,12 @@
     <Filter Include="Widgets">
       <UniqueIdentifier>{0bd96c2a-7d9f-4255-b9f9-615e3db1e81e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\txt">
+      <UniqueIdentifier>{3b6cbf2e-790f-434c-8b5f-429c0eeef81d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\img">
+      <UniqueIdentifier>{1b9a5781-cb2c-48f9-92c1-fd1a36a652fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Forms\MapEditor\MapEditor.cpp">

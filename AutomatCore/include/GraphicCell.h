@@ -21,9 +21,13 @@ private:
     virtual void paintBorder(QPainter *painter) = 0;
     virtual void paintCell(QPainter *painter) = 0;
     virtual void paintInformation(QPainter* painter) = 0;
+    virtual void paintDirections(QPainter* painter) = 0;
+
+    virtual void paintBorderSelected(QPainter* painter, bool isSelected) = 0;
 
 protected:
     QRectF boundingRect() const override;
+    void mousePressEvent(QGraphicsSceneMouseEvent* event) override;
 
 protected:
     SceneSettings* Settings;

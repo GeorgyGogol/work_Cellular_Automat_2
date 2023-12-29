@@ -3,9 +3,9 @@
 
 using namespace automat;
 
-FieldSquare::FieldSquare(int height, int width)
-    : AbstractField(height, 8)
-    , Width(width)
+FieldSquare::FieldSquare(const FieldProperties& props)
+    : AbstractField(props, 8)
+    , Width(props.Width)
 {
     Cells = new SurfaceCell[Height * Width];
 }

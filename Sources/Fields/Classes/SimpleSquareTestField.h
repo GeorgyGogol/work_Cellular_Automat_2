@@ -10,7 +10,7 @@ namespace automat {
         , public ICellAccess<int>
     {
     public:
-        SimpleSquareTestField(int height, int width);
+        SimpleSquareTestField(const FieldProperties& props);
         virtual ~SimpleSquareTestField();
 
     private:

@@ -32,6 +32,8 @@ public:
     inline int getMapWidth() const { 
         return Width; 
     }
+    
+    QString getMapName() const;
 
 public slots:
     void MapTypeChange(int);

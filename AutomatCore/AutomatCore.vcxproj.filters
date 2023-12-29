@@ -8,70 +8,67 @@
       <Filter>Sources</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Abstractions\AbstractField.h">
-      <Filter>Field\Abstractions</Filter>
+      <Filter>AutomatSources\Field\Abstractions</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Classes\SimpleSquareTestField.h">
-      <Filter>Field\Classes</Filter>
+      <Filter>AutomatSources\Field\Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Classes\FieldSquare.h">
-      <Filter>Field\Classes</Filter>
+      <Filter>AutomatSources\Field\Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Types\Direction.h">
-      <Filter>Field\Types</Filter>
+      <Filter>AutomatSources\Field\Types</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Types\Directions.h">
-      <Filter>Field\Types</Filter>
+      <Filter>AutomatSources\Field\Types</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Types\DirectionsStatuses.h">
-      <Filter>Field\Types</Filter>
+      <Filter>AutomatSources\Field\Types</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Types\Point.h">
-      <Filter>Field\Types</Filter>
+      <Filter>AutomatSources\Field\Types</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Interfaces\ICellAccess.h">
-      <Filter>Field\Interfaces</Filter>
+      <Filter>AutomatSources\Field\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Manager\FieldsRecalcer.h">
-      <Filter>Field\Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Sources\Fields\Manager\FieldProperties.h">
-      <Filter>Field\Manager</Filter>
+      <Filter>AutomatSources\Field\Manager</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Fields\Manager\FieldsManager.h">
-      <Filter>Field\Manager</Filter>
+      <Filter>AutomatSources\Field\Manager</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Automat\Automat.h">
-      <Filter>Automat</Filter>
+      <Filter>AutomatSources\Automat</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Cells\Structs\CellLevels.h">
-      <Filter>Cells\Structs</Filter>
+      <Filter>AutomatSources\Cells\Structs</Filter>
     </ClInclude>
     <ClInclude Include="..\Sources\Cells\Classes\SurfaceCell.h">
-      <Filter>Cells\Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Sources\General\Interfaces\IManagerIterator.h">
-      <Filter>General</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Sources\General\Interfaces\IContainerManager.h">
-      <Filter>General</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Sources\Fields\Classes\FieldsPredefines.h">
-      <Filter>Field\Classes</Filter>
+      <Filter>AutomatSources\Cells\Classes</Filter>
     </ClInclude>
     <ClInclude Include="include\automatcore_global.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="src\supportClasses\SceneSettings.h">
-      <Filter>Sources\SupportClasses</Filter>
+      <Filter>SupportClasses</Filter>
     </ClInclude>
     <ClInclude Include="src\supportClasses\CellsSettings.h">
-      <Filter>Sources\SupportClasses</Filter>
+      <Filter>SupportClasses</Filter>
     </ClInclude>
     <ClInclude Include="src\supportClasses\ColorLimits.h">
-      <Filter>Sources\SupportClasses</Filter>
+      <Filter>SupportClasses</Filter>
     </ClInclude>
     <ClInclude Include="include\CoreProperties.h">
       <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\General\Identificators\ObjectID.h">
+      <Filter>AutomatSources\General\Identificators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\General\Identificators\UniqueIDController.h">
+      <Filter>AutomatSources\General\Identificators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Sources\Fields\Abstractions\FieldProperties.h">
+      <Filter>AutomatSources\Field\Abstractions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -82,122 +79,134 @@
       <Filter>Sources</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Abstractions\AbstractField.cpp">
-      <Filter>Field\Abstractions</Filter>
+      <Filter>AutomatSources\Field\Abstractions</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Classes\SimpleSquareTestField.cpp">
-      <Filter>Field\Classes</Filter>
+      <Filter>AutomatSources\Field\Classes</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Classes\FieldSquare.cpp">
-      <Filter>Field\Classes</Filter>
+      <Filter>AutomatSources\Field\Classes</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Types\Direction.cpp">
-      <Filter>Field\Types</Filter>
+      <Filter>AutomatSources\Field\Types</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Types\Directions.cpp">
-      <Filter>Field\Types</Filter>
+      <Filter>AutomatSources\Field\Types</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Types\DirectionsStatuses.cpp">
-      <Filter>Field\Types</Filter>
+      <Filter>AutomatSources\Field\Types</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Types\Point.cpp">
-      <Filter>Field\Types</Filter>
+      <Filter>AutomatSources\Field\Types</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Manager\FieldsManager.cpp">
-      <Filter>Field\Manager</Filter>
+      <Filter>AutomatSources\Field\Manager</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Fields\Manager\FieldsRecalcer.cpp">
-      <Filter>Field\Manager</Filter>
+      <Filter>AutomatSources\Field\Manager</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Automat\Automat.cpp">
-      <Filter>Automat</Filter>
+      <Filter>AutomatSources\Automat</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Cells\Structs\CellLevels.cpp">
-      <Filter>Cells\Structs</Filter>
+      <Filter>AutomatSources\Cells\Structs</Filter>
     </ClCompile>
     <ClCompile Include="..\Sources\Cells\Classes\SurfaceCell.cpp">
-      <Filter>Cells\Classes</Filter>
+      <Filter>AutomatSources\Cells\Classes</Filter>
     </ClCompile>
     <ClCompile Include="src\GraphicCell.cpp">
-      <Filter>Sources\Widgets</Filter>
+      <Filter>Widgets</Filter>
     </ClCompile>
     <ClCompile Include="src\AutomatFieldScene.cpp">
-      <Filter>Sources\Widgets</Filter>
+      <Filter>Widgets</Filter>
     </ClCompile>
     <ClCompile Include="src\supportClasses\SceneSettings.cpp">
-      <Filter>Sources\SupportClasses</Filter>
+      <Filter>SupportClasses</Filter>
     </ClCompile>
     <ClCompile Include="src\cells\TestGraphicCell.cpp">
-      <Filter>Sources\Widgets\Cells</Filter>
+      <Filter>Widgets\Cells</Filter>
     </ClCompile>
     <ClCompile Include="src\supportClasses\CellsSettings.cpp">
-      <Filter>Sources\SupportClasses</Filter>
+      <Filter>SupportClasses</Filter>
     </ClCompile>
     <ClCompile Include="src\supportClasses\ColorLimits.cpp">
-      <Filter>Sources\SupportClasses</Filter>
+      <Filter>SupportClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\General\Identificators\ObjectID.cpp">
+      <Filter>AutomatSources\General\Identificators</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sources\General\Identificators\UniqueIDController.cpp">
+      <Filter>AutomatSources\General\Identificators</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Field">
-      <UniqueIdentifier>{5bb29912-711f-4631-b0d9-909cd4402ebb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Sources">
       <UniqueIdentifier>{ec2ab29a-325a-4b5c-bb8a-fda02c7f7524}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Field\Abstractions">
-      <UniqueIdentifier>{b84ef04b-7ea9-45da-aeb5-5c1113efb3c2}</UniqueIdentifier>
+    <Filter Include="AutomatSources">
+      <UniqueIdentifier>{79b042c5-e476-488c-979b-2f7bd1c17115}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Field\Classes">
-      <UniqueIdentifier>{17cd21b3-474b-41e8-b49d-d03d455da32a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Field\Types">
-      <UniqueIdentifier>{3ae91199-e9d7-4aef-9056-149fd2d98f40}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Field\Interfaces">
-      <UniqueIdentifier>{ce1ef2f0-cf36-4383-bea9-8da2255bbcdd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Field\IO">
-      <UniqueIdentifier>{bfdc91c3-4bf8-4e8e-9154-1f1880f4a72f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Field\Manager">
-      <UniqueIdentifier>{fd5b3b91-9fed-4660-a171-677907a42b77}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Automat">
-      <UniqueIdentifier>{c9113dad-137b-440c-b3dd-8da7e2b217b7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Cells">
-      <UniqueIdentifier>{79505bca-7dad-41ce-8662-f60b3559af66}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Cells\Classes">
-      <UniqueIdentifier>{350d34ae-9ebb-4eca-bac0-32e587a019d2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Cells\Structs">
-      <UniqueIdentifier>{b3473bda-fefa-4b31-a779-bdbedf15c58d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="General">
+    <Filter Include="AutomatSources\General">
       <UniqueIdentifier>{3cc120c0-56fe-43eb-953d-f99f391706ca}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Sources\Widgets">
-      <UniqueIdentifier>{e5585a15-a403-4376-8288-8e1f60b8fc4e}</UniqueIdentifier>
+    <Filter Include="AutomatSources\General\Identificators">
+      <UniqueIdentifier>{20a1b208-9f83-445e-bc20-6e643e4cc0ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutomatSources\Field">
+      <UniqueIdentifier>{5bb29912-711f-4631-b0d9-909cd4402ebb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutomatSources\Field\Abstractions">
+      <UniqueIdentifier>{b84ef04b-7ea9-45da-aeb5-5c1113efb3c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutomatSources\Field\Classes">
+      <UniqueIdentifier>{17cd21b3-474b-41e8-b49d-d03d455da32a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutomatSources\Field\Types">
+      <UniqueIdentifier>{3ae91199-e9d7-4aef-9056-149fd2d98f40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutomatSources\Field\Interfaces">
+      <UniqueIdentifier>{ce1ef2f0-cf36-4383-bea9-8da2255bbcdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutomatSources\Field\IO">
+      <UniqueIdentifier>{bfdc91c3-4bf8-4e8e-9154-1f1880f4a72f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutomatSources\Field\Manager">
+      <UniqueIdentifier>{fd5b3b91-9fed-4660-a171-677907a42b77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutomatSources\Cells">
+      <UniqueIdentifier>{79505bca-7dad-41ce-8662-f60b3559af66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutomatSources\Cells\Classes">
+      <UniqueIdentifier>{350d34ae-9ebb-4eca-bac0-32e587a019d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutomatSources\Cells\Structs">
+      <UniqueIdentifier>{b3473bda-fefa-4b31-a779-bdbedf15c58d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutomatSources\Automat">
+      <UniqueIdentifier>{c9113dad-137b-440c-b3dd-8da7e2b217b7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Headers">
       <UniqueIdentifier>{1fbe391c-821b-4f12-9565-afba053f8aa9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Sources\SupportClasses">
-      <UniqueIdentifier>{d3fbf625-1ab8-4bef-8e06-617d12749443}</UniqueIdentifier>
+    <Filter Include="Widgets">
+      <UniqueIdentifier>{e5585a15-a403-4376-8288-8e1f60b8fc4e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Sources\Widgets\Cells">
+    <Filter Include="Widgets\Cells">
       <UniqueIdentifier>{eb4268c6-df1f-45f0-811b-edcf2dcc01ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SupportClasses">
+      <UniqueIdentifier>{d3fbf625-1ab8-4bef-8e06-617d12749443}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="include\AutomatFieldScene.h">
-      <Filter>Sources\Widgets</Filter>
+      <Filter>Widgets</Filter>
     </QtMoc>
     <QtMoc Include="include\GraphicCell.h">
-      <Filter>Sources\Widgets</Filter>
+      <Filter>Widgets</Filter>
     </QtMoc>
     <QtMoc Include="src\cells\TestGraphicCell.h">
-      <Filter>Sources\Widgets\Cells</Filter>
+      <Filter>Widgets\Cells</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

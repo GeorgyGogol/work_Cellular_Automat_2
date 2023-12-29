@@ -82,3 +82,25 @@ void TestGraphicCell::paintInformation(QPainter* painter)
     painter->restore();
 }
 
+void TestGraphicCell::paintDirections(QPainter* painter)
+{
+}
+
+void TestGraphicCell::paintBorderSelected(QPainter* painter, bool isSelected)
+{
+    if (!isSelected) {
+        this->update();
+    }
+    else {
+        painter->save();
+
+        QRectF area = boundingRect();
+        area.setRect(area.x() - 1, area.y() - 1, area.width() - 2, area.height() - 2);
+
+        painter->setPen(Qt::darkBlue);
+        painter->drawRect(area);
+        
+        painter->restore();
+    }
+}
+

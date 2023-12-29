@@ -15,15 +15,25 @@ Automat::~Automat()
     delete Fields;
 }
 
-void Automat::createField(const FieldProperties &properties)
+FieldsManager *const automat::Automat::getFields()
 {
-    Fields->createField(properties);
+    return Fields;
 }
 
-AbstractField *Automat::getLastCreatedField() const
+int Automat::createField(FieldProperties &properties)
+{
+    return Fields->createField(properties);
+}
+
+void automat::Automat::deleteField(const int fieldID)
+{
+    Fields->deleteField(fieldID);
+}
+
+/* AbstractField *Automat::getLastCreatedField() const
 {
     return Fields->getLastField();
-}
+} */
 
 void Automat::doStep()
 {

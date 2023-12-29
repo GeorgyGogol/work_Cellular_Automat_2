@@ -17,10 +17,18 @@ namespace automat {
         FieldsManager* Fields = nullptr;
 
     public:
-        void createField(const FieldProperties& properties);
-        AbstractField* getLastCreatedField() const;
+        FieldsManager* const getFields();
+        int createField(FieldProperties& properties);
+        void deleteField(const int fieldID);
+
+
+        //void getFieldList() const;
+
+        //AbstractField* getLastCreatedField() const;
 
         void doStep();
+        //void saveAutomat();
+        //void loadAutomat();
 
     };
 

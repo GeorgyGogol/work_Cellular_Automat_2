@@ -7,6 +7,8 @@
 #include "Directions.h"
 #include "DirectionsStatuses.h"
 #include "Point.h"
+#include "ObjectID.h"
+#include "FieldProperties.h"
 
 /**
  * @brief Абстракция поля
@@ -15,14 +17,16 @@
 */
 namespace automat {
 
-    class AbstractField
+    class AbstractField 
+        : public ObjectID
     {
     public:
-        AbstractField(int height, int rawDirsCount);
+        AbstractField(const FieldProperties& props, int rawDirsCount);
         virtual ~AbstractField();
 
     private:
         Directions AvalableDirections;
+        char* MapName;
 
     protected:
         int Height;
@@ -31,6 +35,7 @@ namespace automat {
         int getHeight() const;
         virtual int getWidth(int onHeight = 0) const = 0;
         Directions getGeneralDirections() const;
+        char* getMapName() const;
 
         virtual bool isCoordValide(int x, int y) const;
         inline bool isCoordValide(Point p) const { return isCoordValide(p.X, p.Y); }

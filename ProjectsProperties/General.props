@@ -3,13 +3,19 @@
   <ImportGroup Label="PropertySheets" />
 
   <PropertyGroup>
-    <IncludePath>$(IncludePath);$(SolutionDir)\Sources\General;$(SolutionDir)\Sources\General\Interfaces;</IncludePath>
+    <IncludePath>$(IncludePath);$(SolutionDir)\Sources\General;$(SolutionDir)\Sources\General\Interfaces;$(SolutionDir)\Sources\General\Identificators;</IncludePath>
   </PropertyGroup>
 
   <!-- Macros $(SolutionDir) not guaranteed to work in all scenarios -->
   <!-- Interfaces -->
+
+  <!-- Identificators -->
   <ItemGroup>
-    <ClInclude Include="..\Sources\General\Interfaces\IContainerManager.h" />
-    <ClInclude Include="..\Sources\General\Interfaces\IManagerIterator.h" />
+    <ClInclude Include="..\Sources\General\Identificators\ObjectID.h" />
+    <ClInclude Include="..\Sources\General\Identificators\UniqueIDController.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Sources\General\Identificators\ObjectID.cpp" />
+    <ClCompile Include="..\Sources\General\Identificators\UniqueIDController.cpp" />
   </ItemGroup>
 </Project>

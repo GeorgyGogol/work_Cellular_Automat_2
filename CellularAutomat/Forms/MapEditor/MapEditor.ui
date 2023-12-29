@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>635</width>
-    <height>409</height>
+    <width>766</width>
+    <height>594</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -145,6 +145,31 @@
         </widget>
        </item>
        <item>
+        <widget class="QGroupBox" name="gb_MapsList">
+         <property name="title">
+          <string>Список карт</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QListView" name="MapListView">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>120</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
         <spacer name="verticalSpacer_2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -233,33 +258,50 @@
           <item row="0" column="1">
            <widget class="QSpinBox" name="spinBox"/>
           </item>
-         </layout>
-        </widget>
-       </item>
-       <item>
-        <widget class="QGroupBox" name="groupBox_5">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
-         <property name="title">
-          <string>Значение</string>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_3">
-          <item>
-           <widget class="QRadioButton" name="radioButton_3">
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_2">
             <property name="text">
-             <string>Увеличить</string>
-            </property>
-            <property name="checked">
-             <bool>true</bool>
+             <string>Сила</string>
             </property>
            </widget>
           </item>
-          <item>
-           <widget class="QRadioButton" name="radioButton_4">
-            <property name="text">
-             <string>Уменьшить</string>
+          <item row="1" column="1">
+           <widget class="QSpinBox" name="spinBox_2">
+            <property name="maximum">
+             <number>10</number>
             </property>
+            <property name="value">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="QGroupBox" name="groupBox_5">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="title">
+             <string>Значение</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QRadioButton" name="radioButton_3">
+               <property name="text">
+                <string>Увеличить</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButton_4">
+               <property name="text">
+                <string>Уменьшить</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>
@@ -310,7 +352,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>635</width>
+     <width>766</width>
      <height>21</height>
     </rect>
    </property>
@@ -329,13 +371,14 @@
     <property name="title">
      <string>Вид</string>
     </property>
-    <addaction name="action_EditSettingsVisible"/>
     <addaction name="action_ViewSettingsVisible"/>
+    <addaction name="action_MapsListVisible"/>
+    <addaction name="action_EditSettingsVisible"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="MapStatusBar" name="statusBar"/>
   <action name="action">
    <property name="text">
     <string>Новая</string>
@@ -397,8 +440,26 @@
     <string>Закрыть</string>
    </property>
   </action>
+  <action name="action_MapsListVisible">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Список карт</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MapStatusBar</class>
+   <extends>QStatusBar</extends>
+   <header location="global">mapstatusbar.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>
@@ -478,6 +539,22 @@
     <hint type="destinationlabel">
      <x>342</x>
      <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_MapsListVisible</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>gb_MapsList</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>78</x>
+     <y>440</y>
     </hint>
    </hints>
   </connection>

@@ -9,6 +9,7 @@
   <!-- Macros $(SolutionDir) not guaranteed to work in all scenarios -->
   <!-- Abstractions -->
   <ItemGroup>
+    <ClInclude Include="..\Sources\Fields\Abstractions\FieldProperties.h" />
     <ClInclude Include="..\Sources\Fields\Abstractions\AbstractField.h" />
   </ItemGroup>
   <ItemGroup>
@@ -17,7 +18,6 @@
 
   <!-- Classes -->
   <ItemGroup>
-    <ClInclude Include="..\Sources\Fields\Classes\FieldsPredefines.h" />
     <ClInclude Include="..\Sources\Fields\Classes\FieldSquare.h" />
     <ClInclude Include="..\Sources\Fields\Classes\SimpleSquareTestField.h" />
   </ItemGroup>
@@ -35,7 +35,6 @@
 
   <!-- Manager -->
   <ItemGroup>
-    <ClInclude Include="..\Sources\Fields\Manager\FieldProperties.h" />
     <ClInclude Include="..\Sources\Fields\Manager\FieldsManager.h" />
     <ClInclude Include="..\Sources\Fields\Manager\FieldsRecalcer.h" />
   </ItemGroup>

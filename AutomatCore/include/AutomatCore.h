@@ -5,6 +5,10 @@
 #include "CoreProperties.h"
 #include "AutomatFieldScene.h"
 
+QT_BEGIN_NAMESPACE
+class QStandardItemModel;
+QT_END_NAMESPACE
+
 class AUTOMATCORE_EXPORT AutomatCore
 {
 public:
@@ -14,18 +18,21 @@ public:
 private:
     automat::Automat* pAutomat;
     AutomatFieldScene* FieldScene = nullptr;
+    QStandardItemModel* FieldListModel = nullptr;
 
 public:
     AutomatFieldScene* getFieldScenePtr();
 
-    FieldID createField(const FieldInformation& settings);
+    int createField(const FieldInformation& settings);
     FieldList getFieldList();
-    void deleteField(FieldID field);
-    void saveField(FieldID field, const QString& filePath);
-    FieldID loadField(const QString& filePath);
+    void deleteField(int fieldID);
+/*     void saveField(int fieldID, const QString& filePath);
+    int loadField(const QString& filePath); */
 
-    void setupFieldInScene(FieldID field);
+    void setupFieldInScene(int fieldID);
     inline void resetCurrentScene() { setupFieldInScene(-1); }
+
+    QStandardItemModel* getMapListModel();
 
 };
 

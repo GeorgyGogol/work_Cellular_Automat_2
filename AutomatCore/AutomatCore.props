@@ -19,6 +19,7 @@
     <ClCompile Include="src\AutomatFieldScene.cpp" />
     <ClCompile Include="src\GraphicCell.cpp" />
   </ItemGroup>
+
   <!-- Cells Widgets -->
   <ItemGroup>
     <QtMoc Include="src\cells\TestGraphicCell.h" />
@@ -26,6 +27,7 @@
   <ItemGroup>
     <ClCompile Include="src\cells\TestGraphicCell.cpp" />
   </ItemGroup>
+  
   <!-- Support classes -->
   <ItemGroup>
     <ClInclude Include="src\supportClasses\CellsSettings.h" />
