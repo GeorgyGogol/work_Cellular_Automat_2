@@ -67,8 +67,21 @@ void AutomatFieldScene::ClearLinkedField()
     this->setSceneRect(0, 0, 0, 0);
 }
 
+void AutomatFieldScene::setNeedPaintCellInfo(bool isNeed)
+{
+    Settings->PrintCellInfo = isNeed;
+    update();
+}
+
 void AutomatFieldScene::setNeedPaintGrid(bool isNeed)
 {
     Settings->PrintBorder = isNeed;
+    update();
+}
+
+void AutomatFieldScene::setNeedPaintDirections(bool isNeed)
+{
+    //Settings->PrintDirections = isNeed;
+    update();
 }
 

@@ -22,26 +22,37 @@ AutomatFieldScene* AutomatCore::getFieldScenePtr()
     return FieldScene;
 }
 
-void AutomatCore::createField(FieldInformation& settings)
+FieldID AutomatCore::createField(const FieldInformation& settings)
 {
     automat::FieldProperties newFieldSet;
     newFieldSet.Height = settings.Height;
     newFieldSet.Width = settings.Width;
     newFieldSet.Type = automat::FieldProperties::FieldTypes(settings.Type);
 
-    pAutomat->createField(newFieldSet);
-
-    settings.ID = 1000;
+    return pAutomat->createField(newFieldSet);
 }
 
 FieldList AutomatCore::getFieldList()
 {
-    return FieldList();
+    
 }
 
-void AutomatCore::setupFieldInScene(const FieldInformation& field)
+void AutomatCore::deleteField(FieldID field)
 {
-    if (field.ID > 0){
+}
+
+void AutomatCore::saveField(FieldID field, const QString& filePath)
+{
+}
+
+FieldID AutomatCore::loadField(const QString& filePath)
+{
+    return FieldID();
+}
+
+void AutomatCore::setupFieldInScene(FieldID field)
+{
+    if (field > 0){
         //getFieldScenePtr()->LinkWithField(pAutomat->getField(field.ID));
         getFieldScenePtr()->LinkWithField(pAutomat->getLastCreatedField());
     }

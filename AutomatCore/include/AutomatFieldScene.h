@@ -28,6 +28,8 @@ public:
 
 public slots:
     void setNeedPaintGrid(bool isNeed);
+    void setNeedPaintCellInfo(bool isNeed);
+    void setNeedPaintDirections(bool isNeed);
 
 };
 

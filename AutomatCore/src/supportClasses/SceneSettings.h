@@ -16,7 +16,8 @@ private:
     CellsSettings* CellsLook = nullptr;
 
 public:
-    bool PrintBorder = true;
+    bool PrintBorder = false;
+    bool PrintCellInfo = false;
 
     QRectF getCellSize() const;
     inline int getCellPosX(int x) const { return x * DefaultCellSize.width(); }

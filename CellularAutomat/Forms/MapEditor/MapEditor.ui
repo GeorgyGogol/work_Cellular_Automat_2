@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>647</width>
-    <height>388</height>
+    <width>635</width>
+    <height>409</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,7 +25,7 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_6">
        <item>
-        <widget class="QGroupBox" name="groupBox_2">
+        <widget class="QGroupBox" name="gb_ViewMode">
          <property name="enabled">
           <bool>false</bool>
          </property>
@@ -61,10 +61,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox_4">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
+        <widget class="QGroupBox" name="gb_Scale">
          <property name="title">
           <string>Масштаб</string>
          </property>
@@ -101,26 +98,36 @@
             </property>
            </widget>
           </item>
+          <item>
+           <widget class="QPushButton" name="pb_ResetScale">
+            <property name="text">
+             <string>Сброc</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox">
+        <widget class="QGroupBox" name="gb_ViewSettings">
          <property name="title">
           <string>Отображение</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <widget class="QCheckBox" name="checkBox">
+           <widget class="QCheckBox" name="cb_PaintGrid">
             <property name="text">
              <string>Сетка</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkBox_2">
+           <widget class="QCheckBox" name="cb_PaintInfo">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="text">
              <string>Значения</string>
@@ -128,10 +135,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkBox_3">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
+           <widget class="QCheckBox" name="cb_Directions">
             <property name="text">
              <string>Направления</string>
             </property>
@@ -306,8 +310,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>647</width>
-     <height>20</height>
+     <width>635</width>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -317,6 +321,7 @@
     <addaction name="action_CreateNewMap"/>
     <addaction name="action_LoadMap"/>
     <addaction name="action_SaveMap"/>
+    <addaction name="action_CloseMap"/>
     <addaction name="separator"/>
     <addaction name="action_Exit"/>
    </widget>
@@ -330,6 +335,7 @@
    <addaction name="menu"/>
    <addaction name="menu_2"/>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <action name="action">
    <property name="text">
     <string>Новая</string>
@@ -337,7 +343,7 @@
   </action>
   <action name="action_LoadMap">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>Загрузить</string>
@@ -381,6 +387,14 @@
    </property>
    <property name="text">
     <string>Настройки просмотра</string>
+   </property>
+  </action>
+  <action name="action_CloseMap">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Закрыть</string>
    </property>
   </action>
  </widget>

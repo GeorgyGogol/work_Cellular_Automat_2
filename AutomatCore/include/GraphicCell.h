@@ -20,6 +20,7 @@ private:
 private:
     virtual void paintBorder(QPainter *painter) = 0;
     virtual void paintCell(QPainter *painter) = 0;
+    virtual void paintInformation(QPainter* painter) = 0;
 
 protected:
     QRectF boundingRect() const override;

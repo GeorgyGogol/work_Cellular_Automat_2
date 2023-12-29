@@ -51,6 +51,9 @@
     <ClCompile Include="Forms\MapEditor\MapSettings.cpp">
       <Filter>Forms\MapEditor</Filter>
     </ClCompile>
+    <ClCompile Include="Widgets\MapStatusBar.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Forms\MapEditor\MapEditor.h">
@@ -67,6 +70,9 @@
     </QtMoc>
     <QtMoc Include="Forms\MapEditor\MapSettings.h">
       <Filter>Forms\MapEditor</Filter>
+    </QtMoc>
+    <QtMoc Include="Widgets\MapStatusBar.h">
+      <Filter>Widgets</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

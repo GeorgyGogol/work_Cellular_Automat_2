@@ -16,9 +16,9 @@ public:
 
 private:
     Ui::MapSettingsClass *ui;
-    int MapTypeIndex = 0, 
-        Height = 0, 
-        Width = 0;
+    int MapTypeIndex = 0;
+    int Height = 4;
+    int Width = 4;
     
     void RecalcMapSize();
 

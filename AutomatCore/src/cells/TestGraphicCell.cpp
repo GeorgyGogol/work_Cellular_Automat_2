@@ -21,7 +21,7 @@ void TestGraphicCell::paintBorder(QPainter *painter)
 {
     painter->save();
 
-    if (LastColor < 1.0 * Settings->getCellsLook()->Alt()->getLength() / 2)
+    if (LastColor /* < 1.0 * Settings->getCellsLook()->Alt()->getLength() */ > 256 / 2)
         painter->setPen(Qt::black);
     else
         painter->setPen(Qt::white);
@@ -41,11 +41,10 @@ void TestGraphicCell::paintCell(QPainter *painter)
     double step2 = step1 * colors->Alt()->getLength();
 
     int val = step2;
-
-    //int val = round((1.0 + 1.0 * (Settings->getPointLength()) / (*CellDataSource * 1.0 - Settings->getMinPoint())) * colors->Alt()->getLength());
     
     painter->save();
     
+    painter->setPen(Qt::transparent);
     painter->setBrush(QColor(val, val, val));
     painter->drawRect(boundingRect());
 
@@ -54,5 +53,32 @@ void TestGraphicCell::paintCell(QPainter *painter)
     LastColor = val;
 
     colors = nullptr;
+}
+
+void TestGraphicCell::paintInformation(QPainter* painter)
+{
+    painter->save();
+
+    if (LastColor > 1.0 * Settings->getCellsLook()->Alt()->getLength() / 2)
+        painter->setPen(Qt::black);
+    else
+        painter->setPen(Qt::white);
+
+    int lineWidth = painter->fontInfo().pixelSize();
+
+    QRectF infoArea = boundingRect();
+    infoArea.setRect(infoArea.x() + 2, infoArea.y() + 2, infoArea.width() - 4, infoArea.height() - 4);
+    QPoint TextPoint = QPoint(int(infoArea.x()), int(infoArea.y()) + lineWidth);
+
+    QString alt = "Value: " + QString::number(*CellDataSource);
+    QString maxLengthText = "TestTe:";
+    maxLengthText += QString::number(maxLengthText.length());
+
+    painter->drawText(TextPoint, alt);
+    TextPoint.setY(TextPoint.y() + lineWidth + 2);
+
+    painter->drawText(TextPoint, maxLengthText);
+
+    painter->restore();
 }
 

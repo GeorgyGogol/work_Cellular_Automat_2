@@ -5,8 +5,9 @@
 namespace automat {
     class Automat;
     class AbstractField;
-    //class SimpleSquareTestField;
 }
+
+typedef int FieldID;
 
 struct FieldInformation
 {
@@ -14,7 +15,7 @@ struct FieldInformation
     int Width = 0;
     int Type = -1;
 
-    int ID = -1;
+    FieldID ID = -1;
 };
 
 typedef std::vector<FieldInformation> FieldList;

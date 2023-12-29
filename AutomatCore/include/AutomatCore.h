@@ -18,10 +18,14 @@ private:
 public:
     AutomatFieldScene* getFieldScenePtr();
 
-    void createField(FieldInformation& settings);
+    FieldID createField(const FieldInformation& settings);
     FieldList getFieldList();
-    void setupFieldInScene(const FieldInformation& field);
-    inline void resetCurrentScene() { setupFieldInScene(FieldInformation()); }
+    void deleteField(FieldID field);
+    void saveField(FieldID field, const QString& filePath);
+    FieldID loadField(const QString& filePath);
+
+    void setupFieldInScene(FieldID field);
+    inline void resetCurrentScene() { setupFieldInScene(-1); }
 
 };
 

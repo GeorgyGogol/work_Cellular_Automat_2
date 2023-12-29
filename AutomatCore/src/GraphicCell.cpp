@@ -29,5 +29,9 @@ void GraphicCell::paint(QPainter *painter, const QStyleOptionGraphicsItem *optio
     if (Settings->PrintBorder) {
         paintBorder(painter);
     }
+
+    if (Settings->PrintCellInfo) {
+        paintInformation(painter);
+    }
 }
 

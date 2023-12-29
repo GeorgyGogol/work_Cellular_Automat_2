@@ -16,6 +16,7 @@ private:
 
     void paintBorder(QPainter *painter) override;
     void paintCell(QPainter *painter) override;
+    void paintInformation(QPainter* painter) override;
 
 };
 

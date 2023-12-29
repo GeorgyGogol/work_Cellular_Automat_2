@@ -105,6 +105,8 @@
     <ClCompile Include="Forms\ObjectsEditor\ObjectsEditor.cpp" />
     <ClCompile Include="Forms\StartMenu\StartMenu.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Widgets\MapStatusBar.cpp" />
+    <QtMoc Include="Widgets\MapStatusBar.h" />
     <QtMoc Include="Forms\MapEditor\MapEditor.h" />
     <QtMoc Include="Classes\AppCore.h" />
     <QtMoc Include="Forms\ObjectsEditor\ObjectsEditor.h" />

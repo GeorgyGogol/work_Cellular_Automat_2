@@ -190,8 +190,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="include\AutomatFieldScene.h" />
-    <QtMoc Include="include\GraphicCell.h" />
-    <QtMoc Include="src\cells\TestGraphicCell.h" />
+    <QtMoc Include="include\AutomatFieldScene.h">
+      <Filter>Sources\Widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="include\GraphicCell.h">
+      <Filter>Sources\Widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="src\cells\TestGraphicCell.h">
+      <Filter>Sources\Widgets\Cells</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>
