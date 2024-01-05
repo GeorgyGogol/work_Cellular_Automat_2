@@ -31,6 +31,23 @@ void TestGraphicCell::paintBorder(QPainter *painter)
     painter->restore();
 }
 
+void TestGraphicCell::paintBorderSelected(QPainter* painter)
+{
+    painter->save();
+
+    QRectF area = boundingRect();
+    area.setRect(area.x() + 1, area.y() + 1, area.width() - 2, area.height() - 2);
+
+    QPen pen;
+    pen.setColor(Qt::darkBlue);
+    pen.setWidth(2);
+    painter->setPen(pen);
+
+    painter->drawRect(area);
+
+    painter->restore();
+}
+
 void TestGraphicCell::paintCell(QPainter *painter)
 {
     CellsSettings* colors = Settings->getCellsLook();
@@ -86,21 +103,10 @@ void TestGraphicCell::paintDirections(QPainter* painter)
 {
 }
 
-void TestGraphicCell::paintBorderSelected(QPainter* painter, bool isSelected)
+void TestGraphicCell::setValue(void* valType, int value, int multi)
 {
-    if (!isSelected) {
-        this->update();
-    }
-    else {
-        painter->save();
+    Q_UNUSED(valType);
 
-        QRectF area = boundingRect();
-        area.setRect(area.x() - 1, area.y() - 1, area.width() - 2, area.height() - 2);
-
-        painter->setPen(Qt::darkBlue);
-        painter->drawRect(area);
-        
-        painter->restore();
-    }
+    (*CellDataSource) += value * multi;
 }
 

@@ -3,6 +3,8 @@
 
 #include "SceneSettings.h"
 #include <QPainter>
+#include <QGraphicsScene>
+#include <QGraphicsSceneMouseEvent>
 
 GraphicCell::GraphicCell(SceneSettings* pSceneSettings)
     : QGraphicsObject(nullptr)
@@ -20,13 +22,9 @@ QRectF GraphicCell::boundingRect() const
     return Settings->getCellSize();
 }
 
-void GraphicCell::mousePressEvent(QGraphicsSceneMouseEvent* event)
+void GraphicCell::setSelected(bool isSelected)
 {
-    QPainter painter;
-
-    paintBorderSelected(&painter, true);
-
-    QGraphicsItem::mousePressEvent(event);
+    IsSelected = isSelected;
 }
 
 void GraphicCell::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
@@ -35,6 +33,10 @@ void GraphicCell::paint(QPainter *painter, const QStyleOptionGraphicsItem *optio
     Q_UNUSED(widget);
 
     paintCell(painter);
+
+    if (IsSelected) {
+        paintBorderSelected(painter);
+    }
 
     if (Settings->PrintBorder) {
         paintBorder(painter);

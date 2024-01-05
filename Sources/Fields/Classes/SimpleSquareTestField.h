@@ -30,6 +30,8 @@ namespace automat {
 
         void setCellAt(int x, int y, const int& cell) override;
     
+        virtual int getMinPoint() const override;
+        virtual int getMaxPoint() const override;
 
         //bool isCanMove(int x, int y, Direction dir) const;
         //bool isCanMove(Point p, Direction dir) const { return isCanMove(p.X, p.Y, dir); }

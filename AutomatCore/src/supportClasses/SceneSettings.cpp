@@ -51,12 +51,12 @@ int SceneSettings::getFieldType() const
 
 int SceneSettings::getMinPoint() const
 {
-    return -2;
+    return pActiveField->getMinPoint();
 }
 
 int SceneSettings::getMaxPoint() const
 {
-    return 1;
+    return pActiveField->getMaxPoint();
 }
 
 CellsSettings *SceneSettings::getCellsLook()

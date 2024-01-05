@@ -101,17 +101,22 @@
   <ItemGroup>
     <ClCompile Include="Classes\AppCore.cpp" />
     <ClCompile Include="Forms\MapEditor\MapEditor.cpp" />
+    <ClCompile Include="Forms\MapEditor\MapEditorGraphicsView.cpp" />
     <ClCompile Include="Forms\MapEditor\MapSettings.cpp" />
     <ClCompile Include="Forms\ObjectsEditor\ObjectsEditor.cpp" />
     <ClCompile Include="Forms\StartMenu\StartMenu.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Widgets\MapQListView.cpp" />
     <ClCompile Include="Widgets\MapStatusBar.cpp" />
+    <QtMoc Include="Widgets\MapQListView.h" />
     <QtMoc Include="Widgets\MapStatusBar.h" />
     <QtMoc Include="Forms\MapEditor\MapEditor.h" />
     <QtMoc Include="Classes\AppCore.h" />
     <QtMoc Include="Forms\ObjectsEditor\ObjectsEditor.h" />
     <QtMoc Include="Forms\StartMenu\StartMenu.h" />
     <QtMoc Include="Forms\MapEditor\MapSettings.h" />
+    <QtMoc Include="Forms\MapEditor\MapEditorGraphicsView.h" />
+    <ClInclude Include="Forms\MapEditor\MapBrushSettings.h" />
     <ClInclude Include="stdafx.h" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'">Create</PrecompiledHeader>

@@ -70,3 +70,20 @@ void SimpleSquareTestField::setCellAt(int x, int y, const int &cell)
     Cells[x + y * Width] = cell;
 }
 
+int automat::SimpleSquareTestField::getMinPoint() const
+{
+    int out = Cells[0];
+    for (int i = 1; i < Height * Width; ++i) {
+        if (Cells[i] < out) out = Cells[i];
+    }
+    return out;
+}
+
+int automat::SimpleSquareTestField::getMaxPoint() const
+{
+    int out = Cells[0];
+    for (int i = 1; i < Height * Width; ++i) {
+        if (Cells[i] > out) out = Cells[i];
+    }
+    return out;
+}

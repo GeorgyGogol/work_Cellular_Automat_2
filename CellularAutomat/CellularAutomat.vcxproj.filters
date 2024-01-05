@@ -36,6 +36,12 @@
     <Filter Include="Resource Files\img">
       <UniqueIdentifier>{1b9a5781-cb2c-48f9-92c1-fd1a36a652fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Forms\MapEditor\SupportClasses">
+      <UniqueIdentifier>{b02a54bc-b063-4e9c-8345-9163ad23001f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Forms\MapEditor\Widgets">
+      <UniqueIdentifier>{eec84566-7c43-4a82-a109-4265aca6b31b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Forms\MapEditor\MapEditor.cpp">
@@ -60,6 +66,12 @@
     <ClCompile Include="Widgets\MapStatusBar.cpp">
       <Filter>Widgets</Filter>
     </ClCompile>
+    <ClCompile Include="Forms\MapEditor\MapEditorGraphicsView.cpp">
+      <Filter>Forms\MapEditor\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="Widgets\MapQListView.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Forms\MapEditor\MapEditor.h">
@@ -80,6 +92,12 @@
     <QtMoc Include="Widgets\MapStatusBar.h">
       <Filter>Widgets</Filter>
     </QtMoc>
+    <QtMoc Include="Forms\MapEditor\MapEditorGraphicsView.h">
+      <Filter>Forms\MapEditor\Widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="Widgets\MapQListView.h">
+      <Filter>Widgets</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="Forms\MapEditor\MapEditor.ui">
@@ -98,6 +116,9 @@
   <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>pch</Filter>
+    </ClInclude>
+    <ClInclude Include="Forms\MapEditor\MapBrushSettings.h">
+      <Filter>Forms\MapEditor\SupportClasses</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

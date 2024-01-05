@@ -22,7 +22,7 @@ AutomatFieldScene::~AutomatFieldScene()
     delete Settings;
 }
 
-void AutomatFieldScene::createTestField()
+void AutomatFieldScene::setupTestField()
 {
     using namespace automat;
     SimpleSquareTestField* pField = static_cast<SimpleSquareTestField*>(Settings->getFieldPtr());
@@ -48,7 +48,7 @@ void AutomatFieldScene::LinkWithField(automat::AbstractField* pField)
     switch (Settings->getFieldType())
     {
     case 0:
-        createTestField();
+        setupTestField();
         break;
     
     case -1:

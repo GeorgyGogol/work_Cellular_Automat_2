@@ -9,6 +9,7 @@
 #include "Point.h"
 #include "ObjectID.h"
 #include "FieldProperties.h"
+#include <string>
 
 /**
  * @brief Абстракция поля
@@ -26,7 +27,7 @@ namespace automat {
 
     private:
         Directions AvalableDirections;
-        char* MapName;
+        std::string MapName;
 
     protected:
         int Height;
@@ -35,7 +36,7 @@ namespace automat {
         int getHeight() const;
         virtual int getWidth(int onHeight = 0) const = 0;
         Directions getGeneralDirections() const;
-        char* getMapName() const;
+        std::string getMapName() const;
 
         virtual bool isCoordValide(int x, int y) const;
         inline bool isCoordValide(Point p) const { return isCoordValide(p.X, p.Y); }
@@ -43,6 +44,9 @@ namespace automat {
         virtual DirectionsStatuses getDirectionsForPoint(int x, int y) const = 0;
 
         virtual int getFieldType() const = 0;
+
+        virtual int getMinPoint() const = 0;
+        virtual int getMaxPoint() const = 0;
 
     };
 

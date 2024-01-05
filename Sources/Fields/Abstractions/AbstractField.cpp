@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "AbstractField.h"
-#include <string>
 
 using namespace automat;
 
@@ -9,20 +8,17 @@ AbstractField::AbstractField(const FieldProperties& props, int rawDirsCount)
     , Height(props.Height)
     , AvalableDirections(rawDirsCount)
 {
-    if (props.MapName) {
-        MapName = new char[std::strlen(props.MapName)];
-        std::strncpy(MapName, props.MapName, std::strlen(props.MapName));
+    if (props.MapName.empty()) {
+        MapName = props.MapName;
     }
     else {
         std::string unnamed = "UnnamedMap" + std::to_string(props.ID);
-        MapName = new char[unnamed.size()];
-        std::strncpy(MapName, unnamed.c_str(), unnamed.size());
+        MapName = unnamed;
     }
 }
 
 AbstractField::~AbstractField()
 {
-    delete[] MapName;
 }
 
 int AbstractField::getHeight() const
@@ -35,7 +31,7 @@ Directions AbstractField::getGeneralDirections() const
     return AvalableDirections;
 }
 
-char* automat::AbstractField::getMapName() const
+std::string automat::AbstractField::getMapName() const
 {
     return MapName;
 }

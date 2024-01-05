@@ -9,8 +9,8 @@
   <!-- Macros $(SolutionDir) not guaranteed to work in all scenarios -->
   <!-- Abstractions -->
   <ItemGroup>
-    <ClInclude Include="..\Sources\Fields\Abstractions\FieldProperties.h" />
     <ClInclude Include="..\Sources\Fields\Abstractions\AbstractField.h" />
+    <ClInclude Include="..\Sources\Fields\Abstractions\FieldProperties.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Sources\Fields\Abstractions\AbstractField.cpp" />

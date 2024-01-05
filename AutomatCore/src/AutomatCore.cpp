@@ -3,6 +3,7 @@
 
 #include "Automat.h"
 #include "FieldsManager.h"
+#include "AbstractField.h"
 
 #include <QStandardItemModel>
 
@@ -33,14 +34,18 @@ int AutomatCore::createField(const FieldInformation& settings)
     newFieldSet.Width = settings.Width;
     newFieldSet.Type = automat::FieldProperties::FieldTypes(settings.Type);
     if (settings.Name.length() > 0) {
-        std::strncpy(newFieldSet.MapName, settings.Name.toLocal8Bit().toStdString().c_str(), settings.Name.length());
+        newFieldSet.MapName = settings.Name.toLocal8Bit().toStdString();
     }
 
+    newFieldSet.ID = pAutomat->createField(newFieldSet);
+    newFieldSet.MapName = pAutomat->getFields()->getField(newFieldSet.ID)->getMapName();
+
     QStandardItemModel* mapList = getMapListModel();
-    QStandardItem* item = new QStandardItem(settings.Name);
+    QStandardItem* item = new QStandardItem(QString(newFieldSet.MapName.c_str()));
+    item->setData(newFieldSet.ID, Qt::UserRole + 1);
     mapList->appendRow(item);
 
-    return pAutomat->createField(newFieldSet);
+    return newFieldSet.ID;
 }
 
 FieldList AutomatCore::getFieldList()

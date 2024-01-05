@@ -41,5 +41,7 @@ public slots:
     void on_cb_PaintInfo_toggled(bool value);
     void on_cb_Directions_toggled(bool value);
 
+    void on_MapListView_clicked(QModelIndex index);
+
 };
 

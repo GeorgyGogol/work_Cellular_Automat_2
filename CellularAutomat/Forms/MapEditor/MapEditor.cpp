@@ -18,6 +18,14 @@ MapEditor::MapEditor(QWidget *parent)
 
     connect(ui->spinBox_Scale, qOverload<int>(&QSpinBox::valueChanged), this, &MapEditor::setMainViewScale);
 
+    connect(ui->spinBox_BrushStrength, qOverload<int>(&QSpinBox::valueChanged), ui->mainView, &MapEditorGraphicsView::setBrushStrenght);
+    connect(
+        ui->rb_MouseBrashInc, 
+        &QRadioButton::toggled,
+        this, 
+        [=](bool checked) { ui->mainView->setBrushIsIncreace(checked); }
+    );
+
     ui->MapListView->setModel(pDll->getMapListModel());
 }
 
@@ -131,5 +139,11 @@ void MapEditor::on_cb_Directions_toggled(bool value)
     AutomatFieldScene* pScene = pDll->getFieldScenePtr();
     if (!pScene) return;
     pScene->setNeedPaintDirections(value);
+}
+
+void MapEditor::on_MapListView_clicked(QModelIndex index)
+{
+    int id = index.data(Qt::UserRole + 1).toInt();
+    pDll->setupFieldInScene(id);
 }
 

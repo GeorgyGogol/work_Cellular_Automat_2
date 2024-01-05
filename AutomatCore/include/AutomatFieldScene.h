@@ -18,7 +18,7 @@ public:
 private:
     SceneSettings* Settings;
 
-    void createTestField();
+    void setupTestField();
 
 protected:
 

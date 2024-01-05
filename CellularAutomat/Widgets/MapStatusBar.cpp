@@ -11,9 +11,9 @@ MapStatusBar::MapStatusBar(QWidget *parent)
 {
     Clear();
 
-    mapName->setMinimumWidth(80);
-    mapType->setMinimumWidth(100);
-    mapSize->setMinimumWidth(70);
+    mapName->setMinimumWidth(90);
+    mapType->setMinimumWidth(110);
+    mapSize->setMinimumWidth(120);
 
     addWidget(mapName);
     addWidget(mapType);
