@@ -4,6 +4,10 @@
 #include <QGraphicsScene>
 #include "CoreProperties.h"
 
+namespace automat {
+    class AbstractField;
+}
+
 class SceneSettings;
 
 class AUTOMATCORE_EXPORT AutomatFieldScene
@@ -30,6 +34,9 @@ public slots:
     void setNeedPaintGrid(bool isNeed);
     void setNeedPaintCellInfo(bool isNeed);
     void setNeedPaintDirections(bool isNeed);
+
+signals:
+    void FieldInfoChanged(const FieldInformation& actualInfo);
 
 };
 

@@ -72,6 +72,9 @@
     <ClCompile Include="Widgets\MapQListView.cpp">
       <Filter>Widgets</Filter>
     </ClCompile>
+    <ClCompile Include="Classes\ResCore.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Forms\MapEditor\MapEditor.h">
@@ -119,6 +122,9 @@
     </ClInclude>
     <ClInclude Include="Forms\MapEditor\MapBrushSettings.h">
       <Filter>Forms\MapEditor\SupportClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\ResCore.h">
+      <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

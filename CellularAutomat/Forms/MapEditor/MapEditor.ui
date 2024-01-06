@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>766</width>
+    <width>759</width>
     <height>594</height>
    </rect>
   </property>
@@ -203,6 +203,12 @@
     </item>
     <item>
      <widget class="QWidget" name="EditSettingsWidget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>140</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
         <width>140</width>
@@ -353,7 +359,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>766</width>
+     <width>759</width>
      <height>21</height>
     </rect>
    </property>

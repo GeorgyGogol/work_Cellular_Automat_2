@@ -2,9 +2,6 @@
 #include "GraphicCell.h"
 
 #include "SceneSettings.h"
-#include <QPainter>
-#include <QGraphicsScene>
-#include <QGraphicsSceneMouseEvent>
 
 GraphicCell::GraphicCell(SceneSettings* pSceneSettings)
     : QGraphicsObject(nullptr)

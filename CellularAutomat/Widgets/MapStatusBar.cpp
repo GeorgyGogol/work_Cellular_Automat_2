@@ -57,3 +57,10 @@ void MapStatusBar::Clear()
     setMapSize(0, 0);
 }
 
+void MapStatusBar::RecieveInfo(const FieldInformation& data)
+{
+    setMapName(data.Name);
+    setMapType("");
+    setMapSize(data.Width, data.Height);
+}
+

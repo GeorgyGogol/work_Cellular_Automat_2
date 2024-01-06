@@ -4,8 +4,10 @@
 #include "Automat.h"
 #include "FieldsManager.h"
 #include "AbstractField.h"
+#include "AutomatFieldScene.h"
+#include "MapListModelDefs.h"
 
-#include <QStandardItemModel>
+#include <MapListItemModel.h>
 
 AutomatCore::AutomatCore()
 {
@@ -27,7 +29,7 @@ AutomatFieldScene* AutomatCore::getFieldScenePtr()
     return FieldScene;
 }
 
-int AutomatCore::createField(const FieldInformation& settings)
+void AutomatCore::createField(FieldInformation& settings)
 {
     automat::FieldProperties newFieldSet;
     newFieldSet.Height = settings.Height;
@@ -37,15 +39,12 @@ int AutomatCore::createField(const FieldInformation& settings)
         newFieldSet.MapName = settings.Name.toLocal8Bit().toStdString();
     }
 
-    newFieldSet.ID = pAutomat->createField(newFieldSet);
-    newFieldSet.MapName = pAutomat->getFields()->getField(newFieldSet.ID)->getMapName();
+    settings.ID = pAutomat->createField(newFieldSet);
+    settings.Name = QString(pAutomat->getFields()->getField(settings.ID)->getMapName().c_str());
 
-    QStandardItemModel* mapList = getMapListModel();
-    QStandardItem* item = new QStandardItem(QString(newFieldSet.MapName.c_str()));
-    item->setData(newFieldSet.ID, Qt::UserRole + 1);
-    mapList->appendRow(item);
-
-    return newFieldSet.ID;
+    QStandardItem* item = new QStandardItem(settings.Name);
+    item->setData(newFieldSet.ID, MapListModel::ID);
+    getMapListModel()->appendRow(item);
 }
 
 FieldList AutomatCore::getFieldList()
@@ -77,6 +76,8 @@ FieldList AutomatCore::getFieldList()
 void AutomatCore::deleteField(int fieldID)
 {
     pAutomat->deleteField(fieldID);
+    MapListItemModel* model = static_cast<MapListItemModel*>(getMapListModel());
+    model->deleteItemById(fieldID);
 }
 
 /* void AutomatCore::saveField(int field, const QString& filePath)
@@ -104,7 +105,7 @@ void AutomatCore::setupFieldInScene(int fieldID)
 QStandardItemModel* AutomatCore::getMapListModel()
 {
     if (!FieldListModel) {
-        FieldListModel = new QStandardItemModel();
+        FieldListModel = new MapListItemModel();
     }
     return FieldListModel;
 }

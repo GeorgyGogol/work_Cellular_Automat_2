@@ -70,6 +70,9 @@
     <ClInclude Include="..\Sources\Fields\Abstractions\FieldProperties.h">
       <Filter>AutomatSources\Field\Abstractions</Filter>
     </ClInclude>
+    <ClInclude Include="include\MapListModelDefs.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\AutomatCore.cpp">
@@ -138,6 +141,9 @@
     <ClCompile Include="..\Sources\General\Identificators\UniqueIDController.cpp">
       <Filter>AutomatSources\General\Identificators</Filter>
     </ClCompile>
+    <ClCompile Include="src\models\MapListItemModel.cpp">
+      <Filter>Widgets\Models</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Sources">
@@ -197,6 +203,9 @@
     <Filter Include="SupportClasses">
       <UniqueIdentifier>{d3fbf625-1ab8-4bef-8e06-617d12749443}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Widgets\Models">
+      <UniqueIdentifier>{c5766cad-d54c-4d22-b5b9-e69d9e563dcf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="include\AutomatFieldScene.h">
@@ -207,6 +216,9 @@
     </QtMoc>
     <QtMoc Include="src\cells\TestGraphicCell.h">
       <Filter>Widgets\Cells</Filter>
+    </QtMoc>
+    <QtMoc Include="src\models\MapListItemModel.h">
+      <Filter>Widgets\Models</Filter>
     </QtMoc>
   </ItemGroup>
 </Project>

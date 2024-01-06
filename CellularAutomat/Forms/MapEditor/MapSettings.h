@@ -6,6 +6,8 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MapSettingsClass; };
 QT_END_NAMESPACE
 
+class ResCore;
+
 class MapSettings : public QDialog
 {
     Q_OBJECT
@@ -19,6 +21,7 @@ private:
     int MapTypeIndex = 0;
     int Height = 4;
     int Width = 4;
+    ResCore* Resources;
     
     void RecalcMapSize();
 

@@ -6,8 +6,8 @@
 #include "MapSettings.h"
 
 #include "AutomatCore.h"
-
-#include <QSpinBox>
+#include "AutomatFieldScene.h"
+#include "MapListModelDefs.h"
 
 MapEditor::MapEditor(QWidget *parent)
     : QMainWindow(parent)
@@ -19,14 +19,10 @@ MapEditor::MapEditor(QWidget *parent)
     connect(ui->spinBox_Scale, qOverload<int>(&QSpinBox::valueChanged), this, &MapEditor::setMainViewScale);
 
     connect(ui->spinBox_BrushStrength, qOverload<int>(&QSpinBox::valueChanged), ui->mainView, &MapEditorGraphicsView::setBrushStrenght);
-    connect(
-        ui->rb_MouseBrashInc, 
-        &QRadioButton::toggled,
-        this, 
-        [=](bool checked) { ui->mainView->setBrushIsIncreace(checked); }
-    );
+    connect(ui->rb_MouseBrashInc, &QRadioButton::toggled, ui->mainView, &MapEditorGraphicsView::setBrushIsIncreace);
 
     ui->MapListView->setModel(pDll->getMapListModel());
+    connect(pDll->getFieldScenePtr(), &AutomatFieldScene::FieldInfoChanged, ui->statusBar, &MapStatusBar::RecieveInfo);
 }
 
 MapEditor::~MapEditor()
@@ -61,16 +57,12 @@ void MapEditor::on_action_CreateNewMap_triggered()
     newFieldSettings.Type = dialog->getMapType();
     newFieldSettings.Name = dialog->getMapName();
 
-    int mapID = pDll->createField(newFieldSettings);
-    if (mapID > -1) {
+    pDll->createField(newFieldSettings);
+    if (newFieldSettings.ID > -1) {
         ui->mainView->setScene(pDll->getFieldScenePtr());
-        pDll->setupFieldInScene(mapID);
+        pDll->setupFieldInScene(newFieldSettings.ID);
 
         setStatusWithMap(true);
-        ui->statusBar->setMapSize(newFieldSettings.Height, newFieldSettings.Width);
-        ui->statusBar->setMapName(newFieldSettings.Name);
-        ui->statusBar->setMapType("Test map");
-        //ui->MapListView->setS
     }
 }
 
@@ -99,8 +91,8 @@ void MapEditor::on_action_CloseMap_triggered()
     }
 
     pDll->resetCurrentScene();
-    //pDll->deleteField();
-
+    pDll->deleteField(ui->MapListView->getCurrentId());
+    ui->statusBar->Clear();
 
     setStatusWithMap(false);
 }
@@ -143,7 +135,7 @@ void MapEditor::on_cb_Directions_toggled(bool value)
 
 void MapEditor::on_MapListView_clicked(QModelIndex index)
 {
-    int id = index.data(Qt::UserRole + 1).toInt();
+    int id = index.data(MapListModel::ID).toInt();
     pDll->setupFieldInScene(id);
 }
 

@@ -1,8 +1,11 @@
 #pragma once
 
-#include "CoreProperties.h"
 #include <QRectF>
 #include "CellsSettings.h"
+
+namespace automat {
+    class AbstractField;
+}
 
 class SceneSettings
 {

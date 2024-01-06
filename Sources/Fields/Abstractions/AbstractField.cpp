@@ -8,7 +8,7 @@ AbstractField::AbstractField(const FieldProperties& props, int rawDirsCount)
     , Height(props.Height)
     , AvalableDirections(rawDirsCount)
 {
-    if (props.MapName.empty()) {
+    if (!props.MapName.empty()) {
         MapName = props.MapName;
     }
     else {

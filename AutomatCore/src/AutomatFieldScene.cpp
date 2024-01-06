@@ -3,17 +3,16 @@
 
 #include "SceneSettings.h"
 #include "CellsSettings.h"
+#include "GraphicCell.h"
+#include "TestGraphicCell.h"
 
 #include "AbstractField.h"
-#include "GraphicCell.h"
 #include "SimpleSquareTestField.h"
-#include "TestGraphicCell.h"
 
 AutomatFieldScene::AutomatFieldScene(QObject* parent)
     : QGraphicsScene(parent)
 {
-    Settings = new SceneSettings();
-    //Settings->DefaultCellSize = QRectF(0, 0, 50, 50);
+    Settings = new SceneSettings;
 }
 
 AutomatFieldScene::~AutomatFieldScene()
@@ -55,6 +54,14 @@ void AutomatFieldScene::LinkWithField(automat::AbstractField* pField)
     default:
         break;
     }
+
+    FieldInformation info;
+    info.ID = pField->getID();
+    info.Height = pField->getHeight();
+    info.Width = pField->getWidth();
+    info.Type = pField->getFieldType();
+    info.Name = QString(pField->getMapName().c_str());
+    emit FieldInfoChanged(info);
 }
 
 void AutomatFieldScene::ClearLinkedField()
@@ -65,6 +72,8 @@ void AutomatFieldScene::ClearLinkedField()
     this->clear();
     this->update();
     this->setSceneRect(0, 0, 0, 0);
+
+    //emit FieldInfoChanged(FieldInformation());
 }
 
 void AutomatFieldScene::setNeedPaintCellInfo(bool isNeed)

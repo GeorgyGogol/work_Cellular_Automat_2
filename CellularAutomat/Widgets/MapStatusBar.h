@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QStatusBar>
+#include "CoreProperties.h"
 
 QT_BEGIN_NAMESPACE
 class QLabel;
@@ -27,5 +28,7 @@ public slots:
     void setMapSize(int width, int height);
     
     void Clear();
+
+    void RecieveInfo(const FieldInformation& data);
 
 };

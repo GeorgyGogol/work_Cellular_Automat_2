@@ -1,4 +1,12 @@
 <RCC>
-    <qresource prefix="CellularAutomat">
+    <qresource prefix="/CellularAutomat"/>
+    <qresource prefix="/CellularAutomat/img">
+        <file alias="NotFound">img/NotFound.png</file>
+    </qresource>
+    <qresource prefix="/MapEditor/txt">
+        <file alias="TestFieldDesc">txt/Field/TestFieldDescription.txt</file>
+    </qresource>
+    <qresource prefix="/MapEditor/img">
+        <file alias="TestFieldImg">img/Field/TestField.png</file>
     </qresource>
 </RCC>
