@@ -16,5 +16,7 @@ public:
     inline int max() const { return Higher; }
     inline int getLength() const { return Higher - Lower; }
 
+    static const int MaximumHigh = 255;
+
 };
 

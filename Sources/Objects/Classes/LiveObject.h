@@ -1,62 +1,63 @@
 #pragma once
 
 #include "Object.h"
-#include "LiveObjectCharacters.h"
-#include "ILivePoints.h"
-//#include "IMoveAction.h"
-#include "IImpactedObject.h"
 #include "DNA.h"
+//#include "LiveObjectCharacters.h"
+//#include "ILivePoints.h"
+//#include "IMoveAction.h"
+//#include "IImpactedObject.h"
 
-#include <vector>
+//#include <vector>
 
+namespace automat {
 
-class LiveObject
-    : public Object
-    , public ILivePoints
-    //, public IMoveAction
-{
-public:
-    LiveObject(const DNA& dna);
-    LiveObject(const LiveObject& from) = delete;
-    LiveObject(LiveObject&& from) noexcept;
-    ~LiveObject()
+    class LiveObject
+        : public Object
+        //, public ILivePoints
+        //, public IMoveAction
     {
-        if (Dna) delete Dna;
-    }
+    public:
+        LiveObject(const DNA& dna);
+        LiveObject(const LiveObject& from) = delete;
+        LiveObject(LiveObject&& from) noexcept;
+        ~LiveObject();
 
-    LiveObject& operator=(LiveObject& src) = delete;
-    LiveObject& operator=(LiveObject&& from) noexcept;
+        LiveObject& operator=(LiveObject& src) = delete;
+        LiveObject& operator=(LiveObject&& from) noexcept;
 
-private:
-//protected:
-	RangedValue Live;
-	int Age = 0;
-	
-    LiveObjectCharacters Characters;
-    EnergyValue StoredEnergy = 0;
-    DNA* Dna;
+    private:
+        DNA* Dna;
+        int Age = 0;
 
-private:
-    void setAge(int age);
+    //protected:
+        //RangedValue Live;
+        
+        //LiveObjectCharacters Characters;
+        //EnergyValue StoredEnergy = 0;
 
-    //std::vector<LiveObjectCharacters> SubObjects;
-    //std::vector<IImpactedObject*> InternalOrgans;
+    private:
+        //void setAge(int age);
 
-    ObjectData getObjectData() const;
+        //std::vector<LiveObjectCharacters> SubObjects;
+        //std::vector<IImpactedObject*> InternalOrgans;
+
+        //ObjectData getObjectData() const;
 
 
-public:
-    void RecieveDamage(const Damage& dmg) override;
-    void SendDamage(IDamageIO* reciver, int damageStrengh) override;
+    public:
+        void RecieveDamage(const Damage& dmg) override;
+        void SendDamage(IDamageIO* reciver, int damageStrengh) override;
 
-    int getLivePointsMax() const override;
-    int getLivePoints() const override;
-    void addLivePoints(int delta) override;
-    bool isAlive() const override;
+    /*     int getLivePointsMax() const override;
+        int getLivePoints() const override;
+        void addLivePoints(int delta) override;
+        bool isAlive() const override; */
 
-    int getAge() const;
-    void increaseAge(int delta);
+        int getAge() const;
+        
+        //void increaseAge(int delta);
 
-};
+    };
 
+}
 

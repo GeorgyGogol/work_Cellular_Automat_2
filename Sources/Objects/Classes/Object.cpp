@@ -3,43 +3,44 @@
 
 #include "Damage.h"
 
-Object::Object(const ObjectData& op)
-    : Existance(op.Existance)
+automat::Object::Object(const automat::ObjectData& op)
+    : ObjectID(op.ID)
+    , Existance(op.Existance)
 {
 }
 
-Object::Object(const ObjectData_s &op)
+/* automat::Object::Object(const automat::ObjectData_s &op)
     : Existance(op.Existance)
 {
-}
+} */
 
-int Object::getExistancePointsMax() const
+int automat::Object::getExistancePointsMax() const
 {
     return Existance.getMaxValue();
 }
 
-int Object::getExistancePoints() const
+int automat::Object::getExistancePoints() const
 {
     return Existance.getValue();
 }
 
-void Object::addExistancePoints(int delta)
+void automat::Object::addExistancePoints(int delta)
 {
     Existance.addValue(delta);
 }
 
-bool Object::isExists() const
+bool automat::Object::isExists() const
 {
     return !Existance.isEmpty();
 }
 
-void Object::RecieveDamage(const Damage& dmg)
+void automat::Object::RecieveDamage(const Damage& dmg)
 {
     removeExistancePoints(dmg.Points);
     //dmg.Emmiter->RecieveDamage(dmg);
 }
 
-void Object::SendDamage(IDamageIO* reciver, int damageStrengh)
+void automat::Object::SendDamage(IDamageIO* reciver, int damageStrengh)
 {
     Damage dmg;
     dmg.Reciver = reciver;

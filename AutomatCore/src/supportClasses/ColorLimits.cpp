@@ -5,5 +5,6 @@ ColorLimits::ColorLimits(int min, int max)
     : Lower(min)
     , Higher(max)
 {
+    if (Higher > MaximumHigh) Higher = MaximumHigh;
 }
 

@@ -2,24 +2,24 @@
 
 #include <vector>
 #include "FieldProperties.h"
+#include "BaseManager.h"
 
 namespace automat {
 
     class FieldsRecalcer;
     class AbstractField;
-    class UniqueIDController;
 
     typedef std::vector<FieldProperties> FieldListContainer;
     typedef std::vector<FieldProperties>::iterator FieldListIterator;
 
     class FieldsManager
+        : public BaseManager
     {
     public:
         FieldsManager();
         ~FieldsManager();
 
     private:
-        UniqueIDController* FieldsID;
         std::vector<AbstractField*> Fields;
         FieldListContainer FieldsInfo;
         FieldsRecalcer* Recalcer;

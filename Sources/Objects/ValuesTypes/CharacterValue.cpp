@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "CharacterValue.h"
 
+using namespace automat;
+
 CharacterValue::CharacterValue(const CharacterValue &src)
 {
     Level = src.Level;

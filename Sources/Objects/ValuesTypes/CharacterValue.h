@@ -1,40 +1,44 @@
 #pragma once
 
-class CharacterValue
-{
-public:
+namespace automat {
 
-public:
-    CharacterValue() = default;
+    class CharacterValue
+    {
+    public:
 
-    CharacterValue(const CharacterValue& src);
-    CharacterValue& operator=(const CharacterValue& src);
+    public:
+        CharacterValue() = default;
 
-    CharacterValue(int level);
-    CharacterValue& operator=(int level);
+        CharacterValue(const CharacterValue& src);
+        CharacterValue& operator=(const CharacterValue& src);
 
-    operator int();
+        CharacterValue(int level);
+        CharacterValue& operator=(int level);
 
-private:
-    int Level = 0;
-    int CurrentUseExperience = 0;
-    int NextLevelExperience = 0;
+        operator int();
 
-    int calcNextLevelPoints(int nextLevel) const;
-    int calcAllUseExperience(int level) const;
+    private:
+        int Level = 0;
+        int CurrentUseExperience = 0;
+        int NextLevelExperience = 0;
 
-public:
-    int getLevel() const;
-    void setLevel(int level);
-    void increaceLevel();
+        int calcNextLevelPoints(int nextLevel) const;
+        int calcAllUseExperience(int level) const;
 
-    int getUseExperience() const;
-    int getMaxExperience() const;
+    public:
+        int getLevel() const;
+        void setLevel(int level);
+        void increaceLevel();
 
-    void addUse(int value);
-    void remUse(int value);
+        int getUseExperience() const;
+        int getMaxExperience() const;
 
-    int getTotalUseExperience() const;
+        void addUse(int value);
+        void remUse(int value);
 
-};
+        int getTotalUseExperience() const;
+
+    };
+
+}
 

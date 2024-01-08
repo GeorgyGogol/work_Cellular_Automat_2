@@ -1,11 +1,15 @@
 #include "stdafx.h"
 #include "ObjectManager.h"
 
-ObjectManager::ObjectManager()
+#include "Object.h"
+#include "UniqueIDController.h"
+
+automat::automat::ObjectManager::ObjectManager()
+	: BaseManager(1000)
 {
 }
 
-ObjectManager::~ObjectManager()
+automat::automat::ObjectManager::~ObjectManager()
 {
 	for (it = ObjectsList.begin(); it != ObjectsList.end(); ++it)
 	{
@@ -13,13 +17,27 @@ ObjectManager::~ObjectManager()
 	}
 }
 
-void ObjectManager::AddObject(Object* object) {
-	ObjectsList.push_back(object);
+int automat::ObjectManager::createObject(ObjectData &objectInfo)
+{
+	objectInfo.ID = IDStorage->getNextID();
+	Object* p = new Object(objectInfo);
+
+	int out = -1;
+	if (p) {
+		ObjectsList.push_back(p);
+		out = objectInfo.ID;
+	}
+	return out;
+}
+
+void automat::ObjectManager::AddObject(Object *object)
+{
+    ObjectsList.push_back(object);
 	it = ObjectsList.end();
 	--it;
 }
 
-void ObjectManager::RefreshObjects()
+void automat::ObjectManager::RefreshObjects()
 {
 	std::list<Object*>::iterator itRefr = ObjectsList.begin();
 	std::list<Object*> ToDelete;
@@ -43,35 +61,37 @@ void ObjectManager::RefreshObjects()
 	}
 }
 
-Object* ObjectManager::Begin() {
+/*
+Object* automat::ObjectManager::Begin() {
 	it = ObjectsList.begin();
 	return *it;
 }
 
-Object* ObjectManager::End() {
+Object* automat::ObjectManager::End() {
 	it = ObjectsList.end();
 	return *it;
 }
 
-Object* ObjectManager::Next() {
+Object* automat::ObjectManager::Next() {
 	if (it != ObjectsList.end()) ++it;
 	return *it;
 }
 
-Object* ObjectManager::First() const {
+Object* automat::ObjectManager::First() const {
 	return *ObjectsList.begin();
 }
 
-Object* ObjectManager::Last() const {
+Object* automat::ObjectManager::Last() const {
 	return *ObjectsList.end();
 }
 
-Object* ObjectManager::Current() const {
+Object* automat::ObjectManager::Current() const {
 	if (ObjectsList.size() < 1) return nullptr;
 	return *it;
 }
+*/
 
-int ObjectManager::Count() const {
+int automat::ObjectManager::Count() const {
 	return ObjectsList.size();
 }
 

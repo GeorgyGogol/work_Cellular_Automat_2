@@ -1,9 +1,17 @@
 #pragma once
 
+/// @file Directions.h
+/// @brief Файл класса направлений
+/// @details В этом файле описывается класс, отвечающий за доступные
+/// направления
+
 #include "Direction.h"
 
 namespace automat {
 
+    /**
+     * 
+    */
     class Directions
     {
     public:

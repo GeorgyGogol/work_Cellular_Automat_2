@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "LiveObject.h"
 
+using namespace automat;
+
 LiveObject::LiveObject(const DNA &dna)
     : Object(dna.getObjectData())
     , Characters(dna.getCharacters())
@@ -19,6 +21,11 @@ LiveObject::LiveObject(LiveObject &&from) noexcept
     Dna = from.Dna;
     from.Dna = nullptr;
     Age = from.Age;
+}
+
+LiveObject::~LiveObject()
+{
+    delete Dna;
 }
 
 /* LiveObject::LiveObject(const LiveObject &from)
@@ -42,15 +49,15 @@ LiveObject &LiveObject::operator=(LiveObject &&from) noexcept
     return *this;
 }
 
-void LiveObject::setAge(int age)
+/* void LiveObject::setAge(int age)
 {
     Age = age;
-}
+} */
 
-ObjectData LiveObject::getObjectData() const
+/* ObjectData LiveObject::getObjectData() const
 {
     return ObjectData{ Existance };
-}
+} */
 
 void LiveObject::RecieveDamage(const Damage &dmg)
 {
@@ -61,7 +68,7 @@ void LiveObject::SendDamage(IDamageIO *reciver, int damageStrengh)
 {
 }
 
-int LiveObject::getLivePointsMax() const
+/* int LiveObject::getLivePointsMax() const
 {
     int out = Live.getMaxValue();
     return out;
@@ -81,31 +88,32 @@ void LiveObject::addLivePoints(int delta)
 bool LiveObject::isAlive() const
 {
     return getLivePoints() > 0;
-}
+} */
 
 int LiveObject::getAge() const
 {
     return Age;
 }
 
+/*
 void LiveObject::increaseAge(int delta)
 {
     bool isDead = rand() % 2;
     
     Age += delta;
 
-    /*
-    if (!isDead){
-        for (auto each : SubObjects) {
-            each.setAge(Age);
-        }
-    }
-    else {
-        Live.setEmpty();
-        for (auto each : SubObjects) {
-            each.setAge(Age);
-            each.Live.setEmpty();
-        }
-    }
-    */
+    //if (!isDead){
+    //    for (auto each : SubObjects) {
+    //        each.setAge(Age);
+    //    }
+    //}
+    //else {
+    //    Live.setEmpty();
+    //    for (auto each : SubObjects) {
+    //        each.setAge(Age);
+    //        each.Live.setEmpty();
+    //    }
+    //}
 }
+*/
+

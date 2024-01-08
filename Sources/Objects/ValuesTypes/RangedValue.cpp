@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "RangedValue.h"
 
+using namespace automat;
+
 RangedValue::RangedValue()
     : Value(0), MaxValue(0)
 {

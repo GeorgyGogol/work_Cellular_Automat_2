@@ -2,6 +2,8 @@
 #include "Damage.h"
 #include "IDamageIO.h"
 
+using namespace automat;
+
 void Damage::send(const Damage &dmg)
 {
     if (!dmg.Reciver) return;

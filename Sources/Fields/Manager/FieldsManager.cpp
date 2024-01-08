@@ -11,14 +11,13 @@
 using namespace automat;
 
 FieldsManager::FieldsManager()
+    : BaseManager(0)
 {
-    FieldsID = new UniqueIDController(0);
     Recalcer = new FieldsRecalcer();
 }
 
 FieldsManager::~FieldsManager()
 {
-    delete FieldsID;
     delete Recalcer;
 }
 
@@ -47,7 +46,7 @@ int automat::FieldsManager::seekField(int id, int startEl, int endEl)
 int FieldsManager::createField(FieldProperties &properties)
 {
     AbstractField* f = nullptr;
-    properties.ID = FieldsID->getNextID();
+    properties.ID = IDStorage->getNextID();
     switch (properties.Type)
     {
     case FieldProperties::FieldTypes::TestField:
@@ -62,13 +61,14 @@ int FieldsManager::createField(FieldProperties &properties)
     if (f) {
         Fields.push_back(f);
         FieldsInfo.push_back(properties);
+        out = properties.ID;
     }
-    return properties.ID;
+    return out;
 }
 
 void automat::FieldsManager::deleteField(int fieldID)
 {
-    if (!FieldsID->checkIdInRange(fieldID)) return;
+    if (!IDStorage->checkIdInRange(fieldID)) return;
 
     std::vector<AbstractField*>::iterator it = Fields.begin();
     FieldListIterator it2 = FieldsInfo.begin();
@@ -109,7 +109,7 @@ FieldListContainer automat::FieldsManager::getFieldList() const
 
 AbstractField* const FieldsManager::getField(int fieldID) const
 {
-    if (!FieldsID->checkIdInRange(fieldID)) return nullptr;
+    if (!IDStorage->checkIdInRange(fieldID)) return nullptr;
 
     AbstractField* out = nullptr;
     for (int i = 0; i < Fields.size(); ++i) {

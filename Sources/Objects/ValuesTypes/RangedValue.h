@@ -1,47 +1,50 @@
 #pragma once
 
-class RangedValue
-{
-public:
-    RangedValue();
-    RangedValue(int value);
-    RangedValue(int value, int max_value);
-    RangedValue(int max_value, bool is_full);
+namespace automat {
 
-    RangedValue(const RangedValue& src) noexcept;
+    class RangedValue
+    {
+    public:
+        RangedValue();
+        RangedValue(int value);
+        RangedValue(int value, int max_value);
+        RangedValue(int max_value, bool is_full);
 
-    RangedValue& operator=(const RangedValue& src);
-    RangedValue& operator+(const RangedValue& delta);
-    RangedValue& operator-(const RangedValue& delta);
+        RangedValue(const RangedValue& src) noexcept;
 
-    RangedValue& operator=(int value);
-    RangedValue& operator+(int delta);
-    RangedValue& operator+=(int delta);
-    RangedValue& operator-(int delta);
-    RangedValue& operator-=(int delta);
+        RangedValue& operator=(const RangedValue& src);
+        RangedValue& operator+(const RangedValue& delta);
+        RangedValue& operator-(const RangedValue& delta);
 
-    operator int() const;
+        RangedValue& operator=(int value);
+        RangedValue& operator+(int delta);
+        RangedValue& operator+=(int delta);
+        RangedValue& operator-(int delta);
+        RangedValue& operator-=(int delta);
 
-private:
-    int Value = 0;
-    int MaxValue = 0;
+        operator int() const;
 
-protected:
+    private:
+        int Value = 0;
+        int MaxValue = 0;
 
-public:
-    void setMaxValue(int m_value);
-    int getMaxValue() const noexcept;
-    void increaceMax(int delta);
-    inline void decraceMax(int delta) { increaceMax(-delta); }
+    protected:
 
-    void addValue(int val);
-    inline void remValue(int val) { addValue(-val); }
-    int getValue() const;
-    void setEmpty();
+    public:
+        void setMaxValue(int m_value);
+        int getMaxValue() const noexcept;
+        void increaceMax(int delta);
+        inline void decraceMax(int delta) { increaceMax(-delta); }
 
-    bool isFull() const noexcept;
-    inline bool isEmpty() const noexcept { return !isFull(); }
+        void addValue(int val);
+        inline void remValue(int val) { addValue(-val); }
+        int getValue() const;
+        void setEmpty();
 
-};
+        bool isFull() const noexcept;
+        inline bool isEmpty() const noexcept { return !isFull(); }
 
+    };
+
+}
 

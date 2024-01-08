@@ -3,17 +3,24 @@
 #include "RangedValue.h"
 #include "EnergyValue.h"
 
-struct ObjectData_s
-{
-    int Existance = 0;
-    int Energy = 0;
-    EnergyType EType = EnergyType::Base;
-};
+namespace automat {
 
-struct ObjectData
-{
-    RangedValue Existance = 0;
-    EnergyValue Energy = EnergyValue(0, EnergyType::Base);
-};
+    class ObjectData
+    {
+    public:
+        int Existance = 1;
 
+        //int Energy = 0;
+        //EnergyType EType = EnergyType::Base;
+
+        int ID = -1;
+    };
+
+/*     struct ObjectData
+    {
+        RangedValue Existance = 0;
+        EnergyValue Energy = EnergyValue(0, EnergyType::Base);
+    }; */
+
+}
 

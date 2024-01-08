@@ -2,25 +2,26 @@
 #include "Automat.h"
 
 #include "FieldsManager.h"
+#include "ObjectManager.h"
 
-using namespace automat;
-
-Automat::Automat()
+automat::Automat::Automat()
 {
     Fields = new FieldsManager();
+    Objects = new ObjectManager();
 }
 
-Automat::~Automat()
+automat::Automat::~Automat()
 {
     delete Fields;
+    delete Objects;
 }
 
-FieldsManager *const automat::Automat::getFields()
+automat::FieldsManager *const automat::Automat::getFields()
 {
     return Fields;
 }
 
-int Automat::createField(FieldProperties &properties)
+int automat::Automat::createField(FieldProperties &properties)
 {
     return Fields->createField(properties);
 }
@@ -30,12 +31,17 @@ void automat::Automat::deleteField(const int fieldID)
     Fields->deleteField(fieldID);
 }
 
-/* AbstractField *Automat::getLastCreatedField() const
+automat::ObjectManager *const automat::Automat::getObjects()
 {
-    return Fields->getLastField();
-} */
+    return Objects;
+}
 
-void Automat::doStep()
+int automat::Automat::createObject(ObjectData &objectInfo)
+{
+    return Objects->createObject(objectInfo);
+}
+
+void automat::Automat::doStep()
 {
 }
 
